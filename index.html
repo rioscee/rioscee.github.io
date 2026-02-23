@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos | Especialista en Embudos de Venta</title>
+    <meta name="description"
+        content="Transformo páginas poco eficientes en máquinas de conversión. Diseño de embudos, copywriting y optimización.">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Swiper CSS (Para Carrusel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <!-- NAVIGATION -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- PROMO BANNER -->
+
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+        <!-- Background Animated Elements -->
+        <div class="floating-shape"
+            style="width: 24rem; height: 24rem; background-color: #2563eb; top: -10%; left: -10%;"></div>
+        <div class="floating-shape"
+            style="width: 20rem; height: 20rem; background-color: #06b6d4; bottom: 10%; right: -5%; animation-delay: 2s;">
+        </div>
+
+        <!-- Bubbles Animation -->
+        <div class="bubbles-container">
+            <div class="bubble"
+                style="width: 60px; height: 60px; left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
+            <div class="bubble"
+                style="width: 40px; height: 40px; left: 20%; animation-duration: 10s; animation-delay: 2s;"></div>
+            <div class="bubble"
+                style="width: 70px; height: 70px; left: 35%; animation-duration: 12s; animation-delay: 4s;"></div>
+            <div class="bubble"
+                style="width: 30px; height: 30px; left: 50%; animation-duration: 15s; animation-delay: 1s;"></div>
+            <div class="bubble"
+                style="width: 50px; height: 50px; left: 65%; animation-duration: 11s; animation-delay: 3s;"></div>
+            <div class="bubble"
+                style="width: 80px; height: 80px; left: 80%; animation-duration: 13s; animation-delay: 5s;"></div>
+            <div class="bubble"
+                style="width: 45px; height: 45px; left: 90%; animation-duration: 9s; animation-delay: 2s;"></div>
+            <div class="bubble"
+                style="width: 25px; height: 25px; left: 15%; animation-duration: 18s; animation-delay: 1s;"></div>
+            <div class="bubble"
+                style="width: 55px; height: 55px; left: 75%; animation-duration: 14s; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div class="container hero-grid">
+            <!-- Left Column: Hero Text -->
+            <div class="hero-text-start space-y-6 reveal active">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    ¿Tienes una landingpage que no está vendiendo?
+                </div>
+
+                <h1 class="hero-title">
+                    Tu web debería ser tu mejor vendedor, <br class="hidden md:block">
+                    <span class="gradient-text glow-text">no un gasto mensual.</span>
+                </h1>
+
+                <p class="hero-description">
+                    La era de los sitios web estáticos ha muerto. Yo transformo tu página en
+                    una máquina de ingeniería comercial que atrae, nutre y cierra ventas en automático.
+                </p>
+
+                <div class="hero-cta-wrapper reveal active mt-8">
+                    <a href="#contacto" class="btn btn-primary"
+                        style="padding: 1rem 2rem; font-size: 1.1rem; white-space: nowrap;">
+                        Solicita tu Evaluación Gratuita <i data-lucide="arrow-right"
+                            style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem; display: inline-block; vertical-align: middle;"></i>
+                    </a>
+
+                    <!-- Trust / Social Proof -->
+                    <div class="trust-container">
+                        <div class="avatars-stack">
+                            <img src="./assets/truspilot/testi1.avif" alt="Client 1">
+                            <img src="./assets/truspilot/testi2.avif" alt="Client 2">
+                            <img src="./assets/truspilot/testi3.avif" alt="Client 3">
+                            <img src="./assets/truspilot/testi4.webp" alt="Client 4">
+                            <img src="./assets/truspilot/testi5.avif" alt="Client 5">
+                        </div>
+                        <div class="trust-text">
+                            <div class="stars-mini">
+                                <i data-lucide="star" class="fill-current text-yellow-400 w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current text-yellow-400 w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current text-yellow-400 w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current text-yellow-400 w-3 h-3"></i>
+                                <i data-lucide="star" class="fill-current text-yellow-400 w-3 h-3"></i>
+                            </div>
+                            <p>Más de <strong class="text-white">300 proyectos</strong> transformados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Vertical Carousel -->
+            <div class="relative reveal active" style="transition-delay: 0.2s;">
+                <div class="hero-carousel-container">
+
+                    <!-- COLUMNA 1 (Velocidad Normal) -->
+                    <div class="hero-column col-1">
+                        <div class="hero-track">
+                            <!-- Set Original (using available assets and looping them) -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag1.avif" alt="Art 1"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag2.avif" alt="Art 2"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag3.avif" alt="Art 3"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag4.avif" alt="Art 4"></div>
+
+                            <!-- Set Duplicado -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag1.avif" alt="Art 1"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag2.avif" alt="Art 2"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag3.avif" alt="Art 3"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag4.avif" alt="Art 4"></div>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA 2 (Reversa y más rápida) -->
+                    <div class="hero-column col-2">
+                        <div class="hero-track">
+                            <!-- Set Original -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag5.avif" alt="Art 5"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag6.avif" alt="Art 6"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag7.avif" alt="Art 7"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag1.avif" alt="Art 8"></div>
+
+                            <!-- Set Duplicado -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag5.avif" alt="Art 5"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag6.avif" alt="Art 6"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag7.avif" alt="Art 7"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag1.avif" alt="Art 8"></div>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA 3 (Lenta) -->
+                    <div class="hero-column col-3">
+                        <div class="hero-track">
+                            <!-- Set Original -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag2.avif" alt="Art 9"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag3.avif" alt="Art 10"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag4.avif" alt="Art 11"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag5.avif" alt="Art 12"></div>
+
+                            <!-- Set Duplicado -->
+                            <div class="vertical-card"><img src="./assets/carrusel/pag2.avif" alt="Art 9"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag3.avif" alt="Art 10"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag4.avif" alt="Art 11"></div>
+                            <div class="vertical-card"><img src="./assets/carrusel/pag5.avif" alt="Art 12"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFINITE TEXT 1 -->
+    <div class="marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                CREAMOS TU EMBUDO DE VENTAS <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                DISEÑO PERSUASIVO <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                COPYWRITING ESTRATÉGICO <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                OPTIMIZACIÓN DE CONVERSIÓN <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                RESULTADOS GARANTIZADOS <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                CREAMOS TU EMBUDO DE VENTAS <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                DISEÑO PERSUASIVO <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                COPYWRITING ESTRATÉGICO <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                OPTIMIZACIÓN DE CONVERSIÓN <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+                RESULTADOS GARANTIZADOS <span style="color: #3b82f6; margin: 0 1rem;">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAIN POINTS SECTION -->
+    <section class="section-padding bg-darker content-auto" style="position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div class="floating-shape"
+            style="width: 25rem; height: 25rem; background-color: #ef4444; top: -5%; right: -10%; opacity: 0.15; animation-delay: 1s;">
+        </div>
+        <div class="floating-shape"
+            style="width: 20rem; height: 20rem; background-color: #f97316; bottom: -5%; left: -5%; opacity: 0.15; animation-delay: 3s;">
+        </div>
+
+        <!-- Bubbles -->
+        <div class="bubbles-container" style="opacity: 0.3;">
+            <div class="bubble" style="width: 40px; height: 40px; left: 10%; animation-duration: 15s;"></div>
+            <div class="bubble"
+                style="width: 20px; height: 20px; left: 80%; animation-duration: 12s; animation-delay: 2s;"></div>
+            <div class="bubble"
+                style="width: 30px; height: 30px; left: 40%; animation-duration: 18s; animation-delay: 1s;"></div>
+        </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">La triste realidad de la mayoría de los negocios digitales</h2>
+                <p class="section-subtitle">
+                    El 90% de las webs ahí fuera son invisibles. Son bonitas, tienen colores agradables, y son
+                    absolutamente inútiles para facturar.
+                    <br><br>
+                    <span style="color: #fca5a5; font-weight: 600;">¿Te identificas con este escenario?</span>
+                </p>
+            </div>
+
+            <div class="pain-grid">
+                <!-- Card 1 -->
+                <div class="glass-card pain-card reveal">
+                    <div class="icon-box red">
+                        <i data-lucide="user-x" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="card-title">La Huida Silenciosa</h3>
+                    <p class="card-text">Tienes visitas, pero tu tasa de rebote es alarmante. Los usuarios entran y
+                        huyen antes de ver tu oferta irresistible.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card pain-card reveal" style="transition-delay: 0.1s;">
+                    <div class="icon-box orange">
+                        <i data-lucide="alert-triangle" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="card-title">Disonancia de Valor</h3>
+                    <p class="card-text">Eres un experto en tu nicho, pero tu diseño visual y tu estructura web te hacen
+                        ver "barato" o desactualizado.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card pain-card reveal" style="transition-delay: 0.2s;">
+                    <div class="icon-box yellow">
+                        <i data-lucide="file-x" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="card-title">Copy sin "Punch"</h3>
+                    <p class="card-text">Escribes características técnicas en lugar de beneficios transformadores. No
+                        conectas, y por ende, no conviertes.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass-card pain-card reveal" style="transition-delay: 0.3s;">
+                    <div class="icon-box gray">
+                        <i data-lucide="compass" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="card-title">Navegar a Ciegas</h3>
+                    <p class="card-text">Tomas decisiones por intuición y no por métricas. Sin KPIs claros, escalar tu
+                        facturación es imposible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODOLOGY SECTION (American Standard) -->
+    <section class="methodology-section section-padding content-auto">
+        <div class="container">
+            <div class="section-header reveal text-center mb-12">
+                <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">El Secreto</span>
+                <h2 class="section-title">El Estándar Americano <br> <span class="text-primary">De Alta
+                        Conversión</span></h2>
+                <p class="section-subtitle max-w-3xl mx-auto">
+                    Aplico una <strong class="text-white">metodología americana exclusiva</strong>. Una estructura única
+                    que combina <strong class="text-white">persuasión psicológica + velocidad extrema</strong>. Diseñada
+                    científicamente para multiplicar tus conversiones desde el primer día.
+                </p>
+            </div>
+
+            <div class="steps-container reveal">
+                <!-- Connecting Line -->
+                <div class="steps-line"></div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-circle-wrapper">
+                            <div class="step-circle">01</div>
+                        </div>
+                        <h3 class="step-title">Auditoría & Estrategia</h3>
+                        <p class="step-desc">Analizamos tus métricas actuales, tu competencia y definimos el ángulo de
+                            venta único.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-circle-wrapper">
+                            <div class="step-circle">02</div>
+                        </div>
+                        <h3 class="step-title">Copywriting Persuasivo</h3>
+                        <p class="step-desc">No escribimos textos bonitos. Escribimos guiones psicológicos diseñados
+                            para vender.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-circle-wrapper">
+                            <div class="step-circle">03</div>
+                        </div>
+                        <h3 class="step-title">Estructura & Velocidad</h3>
+                        <p class="step-desc">Implemento la "estructura única" de persuasión americana y optimización de
+                            código para una velocidad extrema.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-item">
+                        <div class="step-circle-wrapper">
+                            <div class="step-circle">04</div>
+                        </div>
+                        <h3 class="step-title">Lanzamiento & Test</h3>
+                        <p class="step-desc">Lanzamos tráfico, medimos conversiones y optimizamos para escalar
+                            resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSYSTEM SECTION -->
+    <section class="ecosystem-section section-padding content-auto">
+        <div class="container">
+            <div class="ecosystem-card reveal">
+                <div class="ecosystem-grid">
+                    <!-- Text Content -->
+                    <div class="ecosystem-info">
+                        <h2 class="ecosystem-title">El Ecosistema Completo de Conversión</h2>
+                        <p class="ecosystem-description">
+                            A diferencia de un diseñador tradicional que solo te entrega "una web", yo te entrego un
+                            activo
+                            digital completo.
+                            Mi servicio incluye todo lo necesario para que tu oferta brille.
+                        </p>
+
+                        <div class="ecosystem-checklist">
+                            <div class="check-item">
+                                <i data-lucide="check-circle-2" class="check-icon"></i>
+                                <span class="check-text">Investigación de Avatar & Competencia</span>
+                            </div>
+                            <div class="check-item">
+                                <i data-lucide="check-circle-2" class="check-icon"></i>
+                                <span class="check-text">Estructura & Wireframing Estratégico</span>
+                            </div>
+                            <div class="check-item">
+                                <i data-lucide="check-circle-2" class="check-icon"></i>
+                                <span class="check-text">Copywriting de Ventas (VSL Scripts incluidos)</span>
+                            </div>
+                            <div class="check-item">
+                                <i data-lucide="check-circle-2" class="check-icon"></i>
+                                <span class="check-text">Integración de Email Marketing & Pixel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Content -->
+                    <div class="ecosystem-visual">
+                        <!-- Glow Effect -->
+                        <div class="visual-glow"></div>
+
+                        <!-- Main Image -->
+                        <img src="./assets/carrusel/pag6.avif" loading="lazy" alt="Ecosistema Digital"
+                            class="visual-image">
+
+                        <!-- Floating Badge -->
+                        <div class="visual-badge">
+                            <p class="badge-label">Resultado Final</p>
+                            <p class="badge-title">Máquina de Ventas 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="trabajos" class="section-padding relative content-auto" style="overflow: hidden;">
+        <!-- Background Elements -->
+        <div class="floating-shape"
+            style="width: 30rem; height: 30rem; background-color: #3b82f6; top: 10%; left: -10%; opacity: 0.1;"></div>
+        <div class="floating-shape"
+            style="width: 25rem; height: 25rem; background-color: #8b5cf6; bottom: 10%; right: -10%; opacity: 0.1; animation-delay: 2s;">
+        </div>
+
+        <!-- Bubbles -->
+        <div class="bubbles-container" style="opacity: 0.3;">
+            <div class="bubble" style="width: 50px; height: 50px; left: 5%; animation-duration: 20s;"></div>
+            <div class="bubble"
+                style="width: 30px; height: 30px; left: 95%; animation-duration: 15s; animation-delay: 4s;"></div>
+            <div class="bubble"
+                style="width: 25px; height: 25px; left: 50%; animation-duration: 25s; animation-delay: 2s;"></div>
+        </div>
+        <div class="container">
+            <div class="portfolio-header reveal">
+                <div>
+                    <h2 class="section-title">Proyectos <span style="color: #3b82f6;">Destacados</span></h2>
+                    <p class="section-subtitle" style="max-width: 36rem;">Embudos de ventas que generan resultados
+                        reales para mis clientes.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-buttons" id="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="realstate">Inmobiliaria</button>
+                    <button class="filter-btn" data-filter="coaching">Coaching</button>
+                    <button class="filter-btn" data-filter="hotmart">Hotmart</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Project 1: Ecommerce -->
+                <div class="portfolio-item group reveal" data-category="ecommerce">
+                    <div class="aspect-video">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop"
+                            class="portfolio-img" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">E-commerce</div>
+                        <h3 class="portfolio-title">Tienda de Moda Online</h3>
+                        <p class="portfolio-desc">Aumentó conversiones un 45% con checkout optimizado.</p>
+                        <a href="#" class="portfolio-link">
+                            Ver Caso <i data-lucide="arrow-up-right"
+                                style="width: 1rem; height: 1rem; margin-left: 0.25rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Real Estate -->
+                <div class="portfolio-item group reveal" data-category="realstate">
+                    <div class="aspect-video">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop"
+                            class="portfolio-img" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Inmobiliaria</div>
+                        <h3 class="portfolio-title">Venta de Apartamentos</h3>
+                        <p class="portfolio-desc">120 leads cualificados en el primer mes de lanzamiento.</p>
+                        <a href="#" class="portfolio-link">
+                            Ver Caso <i data-lucide="arrow-up-right"
+                                style="width: 1rem; height: 1rem; margin-left: 0.25rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Hotmart -->
+                <div class="portfolio-item group reveal" data-category="hotmart">
+                    <div class="aspect-video">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop"
+                            class="portfolio-img" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Info-Producto</div>
+                        <h3 class="portfolio-title">Curso Marketing Digital</h3>
+                        <p class="portfolio-desc">Generación de $50,000 en ventas con VSL funnel.</p>
+                        <a href="#" class="portfolio-link">
+                            Ver Caso <i data-lucide="arrow-up-right"
+                                style="width: 1rem; height: 1rem; margin-left: 0.25rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Coaching -->
+                <div class="portfolio-item group reveal" data-category="coaching">
+                    <div class="aspect-video">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+                            class="portfolio-img" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">High Ticket</div>
+                        <h3 class="portfolio-title">Coaching Ejecutivo</h3>
+                        <p class="portfolio-desc">Duplicó las conversiones a llamadas de venta.</p>
+                        <a href="#" class="portfolio-link">
+                            Ver Caso <i data-lucide="arrow-up-right"
+                                style="width: 1rem; height: 1rem; margin-left: 0.25rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Ecommerce -->
+                <div class="portfolio-item group reveal" data-category="ecommerce">
+                    <div class="aspect-video">
+                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=1000&auto=format&fit=crop"
+                            class="portfolio-img" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Suplementos</div>
+                        <h3 class="portfolio-title">Tienda de Suplementos</h3>
+                        <p class="portfolio-desc">Aumento del AOV (Valor promedio) en un 35%.</p>
+                        <a href="#" class="portfolio-link">
+                            Ver Caso <i data-lucide="arrow-up-right"
+                                style="width: 1rem; height: 1rem; margin-left: 0.25rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="#contacto" class="cta-link">Quiero un embudo así</a>
+            </div>
+            <!-- Offer Section / CTA -->
+            <!-- Offer Section / CTA -->
+            <div class="offer-section reveal" style="margin-top: 4rem;">
+                <div class="container offer-grid">
+
+                    <!-- Left Column: Offer Content -->
+                    <div class="offer-content">
+                        <h3 class="offer-title">Oferta Especial Limitada</h3>
+                        <p class="offer-text">
+                            ¡No dejes pasar esta oportunidad! Obtén un <span class="highlight-offer">50% de
+                                Descuento</span>
+                            en el diseño y desarrollo de tu primera landing page de alto impacto.
+                            <br><br>
+                            Agenda tu consultoría gratuita llenando el formulario y aseguremos tu cupo para este mes.
+                        </p>
+
+                        <div class="countdown-timer glass-style" style="justify-content: flex-start; margin-left: 0;">
+                            <div class="timer-box">
+                                <span class="timer-number timer-hours">00</span>
+                                <span class="timer-label">Horas</span>
+                            </div>
+                            <div class="separator">:</div>
+                            <div class="timer-box">
+                                <span class="timer-number timer-minutes">00</span>
+                                <span class="timer-label">Mins</span>
+                            </div>
+                            <div class="separator">:</div>
+                            <div class="timer-box">
+                                <span class="timer-number timer-seconds">00</span>
+                                <span class="timer-label">Segs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Contact Form (Moved here) -->
+                    <div class="offer-form-wrapper">
+                        <form id="contact-form" class="glass-card round-xl offer-form" onsubmit="sendToWhatsapp(event)">
+                            <h3 class="form-title">Reserva tu Cupo</h3>
+
+                            <!-- Name & Email -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="input-label">Nombre</label>
+                                    <input type="text" id="contact-name" class="input-field" placeholder="Tu nombre"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="input-label">Email</label>
+                                    <input type="email" id="contact-email" class="input-field"
+                                        placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label class="input-label">Celular (con país)</label>
+                                <input type="tel" id="contact-phone" class="input-field" placeholder="+51 999 999 999"
+                                    required>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label class="input-label">Mensaje</label>
+                                <textarea id="contact-message" rows="3" class="input-field"
+                                    placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-btn">
+                                Reclamar Oferta <i data-lucide="arrow-right"
+                                    style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem;"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ABOUT ME SECTION -->
+    <section class="about-section content-auto" style="position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div class="floating-shape"
+            style="width: 25rem; height: 25rem; background-color: #06b6d4; top: 0%; right: 0%; opacity: 0.1;"></div>
+        <div class="floating-shape"
+            style="width: 20rem; height: 20rem; background-color: #10b981; bottom: 0%; left: 0%; opacity: 0.1; animation-delay: 3s;">
+        </div>
+
+        <!-- Bubbles -->
+        <div class="bubbles-container" style="opacity: 0.3;">
+            <div class="bubble" style="width: 35px; height: 35px; left: 15%; animation-duration: 16s;"></div>
+            <div class="bubble"
+                style="width: 45px; height: 45px; left: 85%; animation-duration: 19s; animation-delay: 1s;"></div>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <!--<div class="about-glow"></div>-->
+                    <div class="about-image-container">
+                        <img src="./assets/carlos-2.png" class="about-image" loading="lazy">
+                    </div>
+
+                    <!-- Stats Floating Card -->
+                    <div class="stats-card">
+                        <div class="stats-number">8+</div>
+                        <div class="stats-label">Años de experiencia</div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <h4 class="about-subtitle">Sobre Mí</h4>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">El arquitecto detrás de
+                        tus conversiones.</h2>
+
+                    <div class="about-text">
+                        <p>
+                            Hola, soy <strong style="color: white;">Carlos</strong>. Llevo más de 8 años ayudando a
+                            emprendedores y empresas a transformar sus páginas web en verdaderas máquinas de conversión.
+                        </p>
+                        <p>
+                            No soy solo un diseñador que hace cosas bonitas. Soy un estratega. Mi enfoque combina
+                            psicología de venta, diseño de interfaz y optimización técnica.
+                        </p>
+                        <p>
+                            Mi misión es simple: <span class="highlight-text">Que dejes de perder dinero con una web que
+                                no vende.</span>
+                        </p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div>
+                            <div class="metric-number">300+</div>
+                            <div class="metric-label">Proyectos</div>
+                        </div>
+                        <div>
+                            <div class="metric-number">98%</div>
+                            <div class="metric-label">Satisfechos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Swiper JS) -->
+    <section class="testimonials-section content-auto">
+        <div class="testimonials-bg"></div>
+
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Resultados que hablan</h2>
+                <p class="section-subtitle">Resultados de personas reales, no promesas vacías.</p>
+            </div>
+        </div>
+
+        <!-- Slider Main Container -->
+        <div class="swiper mySwiper w-full max-w-6xl mx-auto px-6">
+            <div class="swiper-wrapper pb-12">
+
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide glass-card testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Carlos transformó completamente nuestra página. Ahora convierte 3 veces
+                        más que antes. La inversión se recuperó en menos de un mes."</p>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="./assets/truspilot/testi1.avif" alt="Juan Pérez" class="avatar-img"
+                                loading="lazy">
+                        </div>
+                        <div>
+                            <div class="user-name">Juan Pérez</div>
+                            <div class="user-role">CEO, TechSolutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide glass-card testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Los resultados han sido espectaculares. El copywriting conecta
+                        perfectamente con mi audiencia y las conversiones superaron todas mis expectativas."</p>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="./assets/truspilot/testi2.avif" alt="María González" class="avatar-img"
+                                loading="lazy">
+                        </div>
+                        <div>
+                            <div class="user-name">María González</div>
+                            <div class="user-role">Coach de Negocios</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide glass-card testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Profesional, rápido y con resultados inmediatos. Nuestra landing page
+                        pasó de ser un gasto a ser nuestra principal fuente de clientes."</p>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="./assets/truspilot/testi3.avif" alt="Roberto Gomez" class="avatar-img"
+                                loading="lazy">
+                        </div>
+                        <div>
+                            <div class="user-name">Roberto Gomez</div>
+                            <div class="user-role">Agencia de Marketing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide glass-card testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"Un cambio radical en la imagen de mi marca personal. Ahora me ven como
+                        una autoridad en mi nicho."</p>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <div class="user-name">Laura M.</div>
+                            <div class="user-role">Consultora Finanzas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- BIOLINK / TOOLS SECTION -->
+
+
+    <!-- INFINITE TEXT 2 -->
+    <div class="marquee-section transparent">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                DISPONIBLE PARA NUEVOS PROYECTOS <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                AGENDA TU CONSULTORÍA <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                DISPONIBLE PARA NUEVOS PROYECTOS <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                AGENDA TU CONSULTORÍA <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                DISPONIBLE PARA NUEVOS PROYECTOS <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                AGENDA TU CONSULTORÍA <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                DISPONIBLE PARA NUEVOS PROYECTOS <span style="color: #22c55e; margin: 0 1rem;">•</span>
+                AGENDA TU CONSULTORÍA <span style="color: #22c55e; margin: 0 1rem;">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="section-padding bg-darker content-auto" style="position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div class="floating-shape"
+            style="width: 28rem; height: 28rem; background-color: #ec4899; top: -5%; left: 20%; opacity: 0.1; animation-delay: 1s;">
+        </div>
+        <div class="floating-shape"
+            style="width: 24rem; height: 24rem; background-color: #6366f1; bottom: -5%; right: 10%; opacity: 0.1; animation-delay: 4s;">
+        </div>
+
+        <!-- Bubbles -->
+        <div class="bubbles-container" style="opacity: 0.3;">
+            <div class="bubble" style="width: 40px; height: 40px; left: 20%; animation-duration: 14s;"></div>
+            <div class="bubble"
+                style="width: 30px; height: 30px; left: 70%; animation-duration: 17s; animation-delay: 3s;"></div>
+        </div>
+        <div class="container">
+            <!-- FAQ SECTION REPLACEMENT -->
+            <div class="section-header reveal text-center">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Resolvemos tus dudas antes de trabajar juntos.</p>
+            </div>
+
+            <div class="faq-grid-container reveal">
+                <!-- FAQ 1 -->
+                <details class="glass-card faq-item group">
+                    <summary class="faq-summary">
+                        <span>¿Cómo funciona el proceso de trabajo?</span>
+                        <span class="faq-icon">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Iniciamos con una auditoría o llamada de descubrimiento. Luego procedemos al diseño de la
+                            estructura (wireframing), redacción de textos persuasivos (copywriting) y finalmente el
+                            desarrollo y lanzamiento.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="glass-card faq-item group">
+                    <summary class="faq-summary">
+                        <span>¿Cuánto tiempo tarda en estar lista mi web?</span>
+                        <span class="faq-icon">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Dependiendo de la complejidad, una Landing Page suele tardar entre 5 a 10 días hábiles.
+                            Embudos
+                            completos pueden tomar de 2 a 4 semanas. Mi prioridad es la calidad y la velocidad de
+                            entrega.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="glass-card faq-item group">
+                    <summary class="faq-summary">
+                        <span>¿Qué necesito para empezar?</span>
+                        <span class="faq-icon">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Solo necesitas tener claro tu producto u oferta. Yo te ayudo a pulir el mensaje. Si tienes
+                            branding (logo, colores) es genial, si no, podemos crear una identidad visual enfocada en
+                            conversión.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="glass-card faq-item group">
+                    <summary class="faq-summary">
+                        <span>¿Ofreces garantía de resultados?</span>
+                        <span class="faq-icon">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Si seguimos mi metodología y lanzamos tráfico, garantizo una mejora en tus
+                            métricas de conversión actuales o trabajamos hasta lograrlo.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <span style="font-size: 1.25rem; font-weight: 700; letter-spacing: -0.05em; color: white;">CARLOS</span>
+                <p style="font-size: 0.75rem; color: #6b7280; margin-top: 0.25rem;">Especialista en Embudos de Venta</p>
+            </div>
+            <div style="font-size: 0.875rem; color: #6b7280;">
+                &copy; 2025 Carlos. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

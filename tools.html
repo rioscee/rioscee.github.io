@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos | Herramientas Web</title>
+    <meta name="description" content="Generadores y calculadoras útiles para desarrolladores y diseñadores web.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- NAVIGATION -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- TOOLS LAYOUT -->
+    <section class="tools-page">
+        <div class="container tools-container">
+            <!-- Sidebar -->
+            <aside class="tools-sidebar">
+                <h3 class="tools-sidebar-title">Herramientas</h3>
+                <nav class="tools-nav">
+                    <button class="tool-btn active" data-tool="whatsapp">
+                        <i data-lucide="message-circle"></i> Link WhatsApp
+                    </button>
+                    <button class="tool-btn" data-tool="clamp">
+                        <i data-lucide="scale"></i> Generador Clamp
+                    </button>
+                    <button class="tool-btn" data-tool="lorem">
+                        <i data-lucide="align-left"></i> Lorem Ipsum
+                    </button>
+                    <button class="tool-btn" data-tool="aspect">
+                        <i data-lucide="monitor"></i> Aspect Ratio
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="tools-content">
+
+                <!-- Whatsapp Tool -->
+                <div id="tool-whatsapp" class="tool-panel active">
+                    <div class="tool-header">
+                        <h2>Generador de Enlaces WhatsApp</h2>
+                        <p>Crea enlaces directos con mensajes personalizados.</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="input-label" for="wa-number">Número (con código de país)</label>
+                                <input type="text" id="wa-number" class="input-field" placeholder="Ej: 521234567890">
+                            </div>
+                            <div>
+                                <label class="input-label" for="wa-message">Mensaje</label>
+                                <textarea id="wa-message" rows="4" class="input-field"
+                                    placeholder="Hola, quiero más información..."></textarea>
+                            </div>
+                            <button onclick="generateWalink()" class="btn btn-primary w-full">Generar Link</button>
+
+                            <div class="result-box hidden" id="wa-result">
+                                <label class="input-label">Tu Enlace:</label>
+                                <div class="flex gap-2">
+                                    <input type="text" id="wa-output" class="input-field" readonly
+                                        aria-label="Resultado del enlace de WhatsApp">
+                                    <button onclick="copyToClipboard('wa-output')" class="btn btn-outline btn-icon"
+                                        aria-label="Copiar enlace">
+                                        <i data-lucide="copy" class="icon-md"></i>
+                                    </button>
+                                </div>
+                                <a href="#" id="wa-preview" target="_blank"
+                                    class="text-blue-400 text-sm mt-2 block hover:underline">Probar enlace →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clamp Tool -->
+                <div id="tool-clamp" class="tool-panel">
+                    <div class="tool-header">
+                        <h2>Generador Clamp( )</h2>
+                        <p>Texto responsivo fluido sin media queries.</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="space-y-4 mb-4">
+                            <!-- Viewport Widths -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="input-label" for="clamp-min-w">Ancho Viewport Mín (px)</label>
+                                    <input type="number" id="clamp-min-w" class="input-field" value="320">
+                                </div>
+                                <div>
+                                    <label class="input-label" for="clamp-max-w">Ancho Viewport Máx (px)</label>
+                                    <input type="number" id="clamp-max-w" class="input-field" value="1200">
+                                </div>
+                            </div>
+                            <!-- Font Sizes -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="input-label" for="clamp-min-f">Font Size Mín (px)</label>
+                                    <input type="number" id="clamp-min-f" class="input-field" value="16">
+                                </div>
+                                <div>
+                                    <label class="input-label" for="clamp-max-f">Font Size Máx (px)</label>
+                                    <input type="number" id="clamp-max-f" class="input-field" value="24">
+                                </div>
+                            </div>
+                            <!-- Font Settings (Optional) -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="input-label" for="clamp-font-family">Google Font (Nombre)</label>
+                                    <input type="text" id="clamp-font-family" list="google-fonts-list"
+                                        class="input-field" placeholder="Ej: Montserrat" value="Outfit">
+                                    <datalist id="google-fonts-list">
+                                        <option value="Roboto">
+                                        <option value="Open Sans">
+                                        <option value="Montserrat">
+                                        <option value="Lato">
+                                        <option value="Poppins">
+                                        <option value="Inter">
+                                        <option value="Roboto Condensed">
+                                        <option value="Oswald">
+                                        <option value="Raleway">
+                                        <option value="Nunito">
+                                        <option value="Merriweather">
+                                        <option value="Ubuntu">
+                                        <option value="PT Sans">
+                                        <option value="Playfair Display">
+                                        <option value="Rubik">
+                                        <option value="Lora">
+                                        <option value="Work Sans">
+                                        <option value="Fira Sans">
+                                        <option value="Quicksand">
+                                        <option value="Barlow">
+                                        <option value="Mulish">
+                                        <option value="Titillium Web">
+                                        <option value="DM Sans">
+                                        <option value="Outfit">
+                                        <option value="Space Grotesk">
+                                        <option value="Space Mono">
+                                        <option value="Syne">
+                                        <option value="Manrope">
+                                        <option value="Sora">
+                                        <option value="Urbanist">
+                                        <option value="Unbounded">
+                                    </datalist>
+                                </div>
+                                <div>
+                                    <label class="input-label" for="clamp-font-weight">Peso (Weight)</label>
+                                    <select id="clamp-font-weight" class="input-field cursor-pointer">
+                                        <option value="100">100 (Thin)</option>
+                                        <option value="300">300 (Light)</option>
+                                        <option value="400">400 (Regular)</option>
+                                        <option value="500">500 (Medium)</option>
+                                        <option value="700" selected>700 (Bold)</option>
+                                        <option value="900">900 (Black)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="calculateClamp()" class="btn btn-primary w-full">Calcular Clamp</button>
+
+                        <div class="result-box hidden" id="clamp-result">
+                            <div class="clamp-preview">
+                                <p class="clamp-preview-label">Vista Previa:</p>
+                                <p id="clamp-preview-text" class="clamp-preview-content">Título de Ejemplo Dinámico</p>
+                            </div>
+                            <label class="input-label">Resultado CSS:</label>
+                            <div class="flex gap-2">
+                                <code id="clamp-output-code" class="input-field code-output"></code>
+                                <button onclick="copyToClipboard('clamp-output-code', true)"
+                                    class="btn btn-outline btn-icon" aria-label="Copiar código CSS">
+                                    <i data-lucide="copy" class="icon-md"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lorem Ipsum Tool -->
+                <div id="tool-lorem" class="tool-panel">
+                    <div class="tool-header">
+                        <h2>Generador Lorem Ipsum</h2>
+                        <p>Texto de relleno para tus diseños.</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="input-label" for="lorem-paragraphs">Cantidad de Párrafos</label>
+                                <input type="number" id="lorem-paragraphs" class="input-field" value="2" min="1"
+                                    max="10">
+                            </div>
+                            <div>
+                                <label class="input-label" for="lorem-lines">Líneas por párrafo (aprox)</label>
+                                <input type="number" id="lorem-lines" class="input-field" value="5" min="1" max="20">
+                            </div>
+                        </div>
+                        <button onclick="generateLorem()" class="btn btn-primary w-full">Generar Texto</button>
+
+                        <div class="result-box hidden" id="lorem-result">
+                            <div class="relative">
+                                <textarea id="lorem-output" class="input-field" rows="10" readonly
+                                    aria-label="Texto Lorem Ipsum generado"></textarea>
+                                <button onclick="copyToClipboard('lorem-output')" class="btn-copy-absolute"
+                                    aria-label="Copiar texto">
+                                    <i data-lucide="copy" class="icon-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aspect Ratio Tool -->
+                <div id="tool-aspect" class="tool-panel">
+                    <div class="tool-header">
+                        <h2>Calculadora Aspect Ratio</h2>
+                        <p>Calcula la relación de aspecto de cualquier dimensión.</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="input-label" for="ratio-w">Ancho (Width)</label>
+                                <input type="number" id="ratio-w" class="input-field" placeholder="1920">
+                            </div>
+                            <div>
+                                <label class="input-label" for="ratio-h">Alto (Height)</label>
+                                <input type="number" id="ratio-h" class="input-field" placeholder="1080">
+                            </div>
+                        </div>
+                        <button onclick="calculateAspectRatio()" class="btn btn-primary w-full">Calcular Ratio</button>
+
+                        <div class="result-box hidden" id="ratio-result">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-white mb-2" id="ratio-display">16:9</div>
+                                <p class="text-gray-400">Relación de Aspecto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </main>
+
+            <!-- Ads Sidebar -->
+            <aside class="tools-ads-sidebar">
+                <div class="ad-card masterfunnel-ad">
+                    <div class="ad-badge">RECOMENDADO</div>
+                    <h3 class="ad-title">MasterFunnel <span class="text-gradient">PRO</span></h3>
+                    <img src="assets/masterfunnel.webp" alt="MasterFunnel" class="w-full mb-4 rounded-lg">
+                    <p class="ad-desc">Aprende a crear embudos de venta que convierten visitantes en clientes.</p>
+                    <ul class="ad-features">
+                        <li><i data-lucide="check-circle-2"></i> Estrategias Probadas</li>
+                        <li><i data-lucide="check-circle-2"></i> Templates Listos</li>
+                        <li><i data-lucide="check-circle-2"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="masterfunnel.html" class="btn btn-primary w-full ad-btn">Ver Programa</a>
+
+                    <!-- Mini Testimonial -->
+                    <div class="ad-testimonial">
+                        <div class="ad-stars">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="ad-quote">"Gracias a este programa facturé mis primeros $10k con embudos."</p>
+                        <div class="ad-author">
+                            <span>— Sofia R., Alumna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future ads -->
+                <div class="ad-card ad-placeholder">
+                    <span>Espacio Publicitario</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <span class="footer-brand-name">CARLOS</span>
+                <p class="footer-brand-tagline">Especialista en Embudos de Venta</p>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 Carlos. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
