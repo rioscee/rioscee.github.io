@@ -1532,7 +1532,6 @@ body {
     font-size: 0.75rem;
     color: white;
     transition: background-color 0.3s;
-    margin-top: 0.5rem;
 }
 
 .btn-buy.blue {
@@ -1632,7 +1631,7 @@ body {
 
 /* --- BIOLINK PAGE STYLES --- */
 .biolink-page {
-    padding-top: 8rem;
+    padding-top: 5rem;
     min-height: 100vh;
 }
 
