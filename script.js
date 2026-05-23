@@ -9,10 +9,28 @@ async function loadNavbar() {
     if (!placeholder) return;
 
     try {
-        const response = await fetch('navbar.html');
+        // Detect if we are inside a subdirectory (like /conoceme/ or /tools/)
+        const path = window.location.pathname;
+        const isSubdir = path.includes('/conoceme/') || path.includes('/tools/') || 
+                         path.endsWith('/conoceme') || path.endsWith('/tools') ||
+                         path.includes('\\conoceme\\') || path.includes('\\tools\\');
+        
+        const navbarPath = isSubdir ? '../navbar.html' : 'navbar.html';
+        const response = await fetch(navbarPath);
         if (!response.ok) throw new Error('Navbar not found');
         const html = await response.text();
         placeholder.innerHTML = html;
+
+        // Adjust relative links in the navbar if in a subdirectory
+        if (isSubdir) {
+            const links = placeholder.querySelectorAll('a');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('http') && !href.startsWith('//') && !href.startsWith('#')) {
+                    link.setAttribute('href', '../' + href);
+                }
+            });
+        }
 
         // Re-initialize Lucide custom icons specifically for the navbar
         if (typeof lucide !== 'undefined') {
