@@ -384,7 +384,7 @@ h4 {
 
 /* Títulos adaptables con Clamp */
 .biolink__title {
-    font-size: clamp(1.6rem, 1.2rem + 2vw, 2.2rem);
+    font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
     font-weight: 800;
     color: white;
     margin-bottom: 0.5rem;
@@ -464,9 +464,11 @@ h4 {
 
 /* Botón de WhatsApp Destacado */
 .biolink__whatsapp-btn {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 1.25rem;
     align-items: center;
-    gap: 1.25rem;
     background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
     color: white;
     padding: 1.25rem;
@@ -498,6 +500,8 @@ h4 {
 }
 
 .biolink__whatsapp-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.75rem;
     border-radius: 50%;
@@ -511,12 +515,16 @@ h4 {
 }
 
 .biolink__whatsapp-title {
+    grid-column: 2;
+    grid-row: 1;
     font-weight: 700;
     font-size: 1.15rem;
     line-height: 1.2;
 }
 
 .biolink__whatsapp-subtitle {
+    grid-column: 2;
+    grid-row: 2;
     font-size: 0.85rem;
     color: #e8f5e9;
     opacity: 0.9;
@@ -531,9 +539,11 @@ h4 {
 }
 
 .biolink__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.35rem 1.25rem;
     align-items: center;
-    gap: 1.25rem;
     background-color: #111a2e; /* Fondo con alto contraste */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde con más contraste */
     padding: 1.25rem;
@@ -581,9 +591,11 @@ h4 {
 
 /* Iconos de la tarjeta */
 .biolink__item-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.75rem;
+    grid-column: 1;
+    grid-row: 1;
+    width: 2.5rem; /* Shrunk from 3.5rem */
+    height: 2.5rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -626,17 +638,14 @@ h4 {
     color: #f472b6;
 }
 
-/* Cuerpo de la tarjeta */
-.biolink__item-body {
-    flex-grow: 1;
-}
-
 .biolink__item-title {
-    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+    grid-column: 2;
+    grid-row: 1;
+    font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
     font-weight: 700;
     color: white;
-    margin-bottom: 0.25rem;
     transition: color 0.3s;
+    line-height: 1.2;
 }
 
 /* Aplicamos color de hover en base a la tarjeta */
@@ -648,13 +657,17 @@ h4 {
 .biolink__item--rose:hover .biolink__item-title { color: #f472b6; }
 
 .biolink__item-desc {
-    font-size: 0.875rem; /* ~14px para descripción móvil */
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    font-size: 0.95rem; /* ~15px para descripción */
     color: var(--text-muted);
     line-height: 1.4;
 }
 
 /* Indicador de acción (chevron) */
 .biolink__item-chevron {
+    grid-column: 3;
+    grid-row: 1;
     color: var(--text-muted);
     opacity: 0.4;
     transition: all 0.3s ease;
