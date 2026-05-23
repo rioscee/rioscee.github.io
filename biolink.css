@@ -256,19 +256,7 @@ h4 {
 }
 
 .promo-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #1d4ed8);
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    z-index: 40;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-    text-align: center;
+    display: none !important;
 }
 
 .banner-text {
@@ -349,7 +337,7 @@ h4 {
 
 /* --- SECCIÓN BIOLINK --- */
 .biolink {
-    padding-top: 8rem;
+    padding-top: 5.5rem;
     padding-bottom: 5rem;
     min-height: 100vh;
     background: radial-gradient(circle at top, rgba(37, 99, 235, 0.15) 0%, rgba(5, 10, 20, 1) 70%);
@@ -362,6 +350,8 @@ h4 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
 .biolink__header {
@@ -544,13 +534,13 @@ h4 {
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    background-color: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #111a2e; /* Fondo con alto contraste */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde con más contraste */
     padding: 1.25rem;
     border-radius: 1rem;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más definida */
     cursor: pointer;
 }
 
