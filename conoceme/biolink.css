@@ -712,10 +712,11 @@ h4 {
 
 /* --- DISEÑO DE TARJETAS (CARDS 2x2) --- */
 .biolink__card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: clamp(0.4rem, 0.2rem + 1vw, 0.75rem);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: clamp(0.25rem, 0.15rem + 1vw, 0.4rem) clamp(0.5rem, 0.4rem + 1.2vw, 0.8rem);
+    align-items: center;
     background-color: #111a2e; /* Fondo con alto contraste */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde con más contraste */
     padding: clamp(0.65rem, 0.4rem + 1.2vw, 1.25rem);
@@ -752,6 +753,8 @@ h4 {
 }
 
 .biolink__card-icon {
+    grid-column: 1;
+    grid-row: 1;
     width: clamp(1.8rem, 1.4rem + 2vw, 2.5rem);
     height: clamp(1.8rem, 1.4rem + 2vw, 2.5rem);
     border-radius: 0.5rem;
@@ -790,7 +793,9 @@ h4 {
 }
 
 .biolink__card-title {
-    font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.25rem);
+    grid-column: 2;
+    grid-row: 1;
+    font-size: clamp(0.85rem, 0.75rem + 0.5vw, 1.15rem);
     font-weight: 700;
     color: white;
     transition: color 0.3s;
@@ -804,7 +809,9 @@ h4 {
 .biolink__card--emerald:hover .biolink__card-title { color: #34d399; }
 
 .biolink__card-desc {
-    font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.9rem);
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
     color: var(--text-muted);
     line-height: 1.35;
 }
