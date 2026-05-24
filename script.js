@@ -55,30 +55,38 @@ async function loadNavbar() {
         const navbarElement = document.getElementById('navbar');
         if (navbarElement) {
             let lastScrollTop = 0;
+            let ticking = false;
+
             window.addEventListener('scroll', () => {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                // Shadow effect logic
-                if (scrollTop > 50) {
-                    navbarElement.classList.add('shadow-lg');
-                } else {
-                    navbarElement.classList.remove('shadow-lg');
+                        // Shadow effect logic
+                        if (scrollTop > 50) {
+                            navbarElement.classList.add('shadow-lg');
+                        } else {
+                            navbarElement.classList.remove('shadow-lg');
+                        }
+
+                        // Hide/Show logic
+                        if (scrollTop > lastScrollTop && scrollTop > 100) {
+                            // Scrolling Down & past 100px
+                            navbarElement.classList.add('hidden-nav');
+                        } else {
+                            // Scrolling Up
+                            navbarElement.classList.remove('hidden-nav');
+                        }
+
+                        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                        ticking = false;
+                    });
+                    ticking = true;
                 }
-
-                // Hide/Show logic
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling Down & past 100px
-                    navbarElement.classList.add('hidden-nav');
-                } else {
-                    // Scrolling Up
-                    navbarElement.classList.remove('hidden-nav');
-                }
-
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            });
+            }, { passive: true });
 
             // Initial check in case page is reloaded scrolled down
-            if (window.pageYOffset > 50) {
+            if ((window.pageYOffset || document.documentElement.scrollTop) > 50) {
                 navbarElement.classList.add('shadow-lg');
             }
         }
@@ -91,21 +99,18 @@ async function loadNavbar() {
 // Call loadNavbar when DOM is ready
 document.addEventListener('DOMContentLoaded', loadNavbar);
 
-// Close Mobile Menu when clicking outside (Global listener, works even after dynamic load if we target IDs correctly)
+// Close Mobile Menu when clicking outside (Global listener, optimized to avoid query selectors if inactive)
 document.addEventListener('click', function (event) {
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (!mobileMenu || !mobileMenu.classList.contains('active')) return;
 
-    // Safety check if elements exist
-    if (!mobileMenu || !mobileBtn) return;
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    if (!mobileBtn) return;
 
     const isClickInsideMenu = mobileMenu.contains(event.target);
-    const isClickOnButton = mobileBtn.contains(event.target);
+    const isClickOnButton = mobileBtn.contains(event.target) || event.target.closest('.mobile-menu-btn');
 
-    // Also check if we are clicking on the toggle icon inside the button
-    const isClickOnIcon = mobileBtn.contains(event.target) || event.target.closest('.mobile-menu-btn');
-
-    if (mobileMenu.classList.contains('active') && !isClickInsideMenu && !isClickOnButton && !isClickOnIcon) {
+    if (!isClickInsideMenu && !isClickOnButton) {
         mobileMenu.classList.remove('active');
     }
 });
@@ -315,50 +320,23 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Scroll Reveal Animation
+// Scroll Reveal Animation using Intersection Observer (highly optimized, avoids layout thrashing)
 const revealElements = document.querySelectorAll('.reveal');
-
-const revealOnScroll = () => {
-    const windowHeight = window.innerHeight;
-    const elementVisible = 100;
+if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Stop observing once revealed
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // Offset the trigger point slightly
+    });
 
     revealElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
-};
-
-window.addEventListener('scroll', revealOnScroll);
-// Trigger once on load
-revealOnScroll();
-
-// Navbar Scroll Effect
-const navbar = document.getElementById('navbar');
-if (navbar) {
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Shadow effect logic
-        if (scrollTop > 50) {
-            navbar.classList.add('shadow-lg');
-        } else {
-            navbar.classList.remove('shadow-lg');
-        }
-
-        // Hide/Show logic
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling Down & past 100px
-            navbar.classList.add('hidden-nav');
-        } else {
-            // Scrolling Up
-            navbar.classList.remove('hidden-nav');
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        revealObserver.observe(element);
     });
 }
 
