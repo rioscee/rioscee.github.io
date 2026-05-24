@@ -818,8 +818,7 @@ h4 {
 
 /* Modificadores de color y estructura para la quinta tarjeta (Full-width) */
 .biolink__card--amber:hover {
-    border-color: rgba(245, 158, 11, 0.4);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
 }
 .biolink__card-icon--amber {
     background-color: rgba(217, 119, 6, 0.12);
@@ -830,4 +829,11 @@ h4 {
 }
 .biolink__card--full {
     grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(17, 26, 46, 0.95) 50%, rgba(225, 29, 72, 0.12) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.biolink__card--full:hover {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.25) 0%, rgba(17, 26, 46, 0.9) 50%, rgba(225, 29, 72, 0.2) 100%);
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.25);
 }
