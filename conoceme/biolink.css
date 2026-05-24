@@ -464,14 +464,13 @@ h4 {
 
 /* Botón de WhatsApp Destacado */
 .biolink__whatsapp-btn {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    gap: 0.1rem 1.25rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
     background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
     color: white;
-    padding: 1.25rem;
+    padding: 1.1rem 1.25rem;
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.3);
@@ -500,35 +499,36 @@ h4 {
 }
 
 .biolink__whatsapp-icon {
-    grid-column: 1;
-    grid-row: 1 / span 2;
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.75rem;
+    padding: 0.6rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
     flex-shrink: 0;
     animation: iconPulse 2s infinite ease-in-out;
 }
 
+.biolink__whatsapp-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
 .biolink__whatsapp-title {
-    grid-column: 2;
-    grid-row: 1;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.2;
 }
 
 .biolink__whatsapp-subtitle {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #e8f5e9;
     opacity: 0.9;
-    margin-top: 0.15rem;
+    margin-top: 0.1rem;
 }
 
 /* Contenedor e Items de la Lista de Opciones */
