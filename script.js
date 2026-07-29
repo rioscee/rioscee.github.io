@@ -11,9 +11,9 @@ async function loadNavbar() {
     try {
         // Detect if we are inside a subdirectory (like /conoceme/ or /tools/)
         const path = window.location.pathname;
-        const isSubdir = path.includes('/conoceme/') || path.includes('/tools/') || 
-                         path.endsWith('/conoceme') || path.endsWith('/tools') ||
-                         path.includes('\\conoceme\\') || path.includes('\\tools\\');
+        const isSubdir = path.includes('/conoceme/') || path.includes('/tools/') || path.includes('/mercado-afiliacion/') ||
+                         path.endsWith('/conoceme') || path.endsWith('/tools') || path.endsWith('/mercado-afiliacion') ||
+                         path.includes('\\conoceme\\') || path.includes('\\tools\\') || path.includes('\\mercado-afiliacion\\');
         
         const navbarPath = isSubdir ? '../navbar.html' : 'navbar.html';
         const response = await fetch(navbarPath);
