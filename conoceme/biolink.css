@@ -456,6 +456,12 @@ h4 {
 }
 
 /* --- DISEÑO DE TARJETAS (CARDS) ESTILO LINKTREE --- */
+.biolink__card-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
 .biolink__card {
     display: flex;
     align-items: center;
