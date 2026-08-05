@@ -437,8 +437,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 600px;
+    padding-top: 0.5rem; /* Dar un poco de espacio para la etiqueta superior */
 }
 
 /* Divisor de texto */
