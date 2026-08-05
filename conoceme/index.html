@@ -35,19 +35,6 @@
                 </div>
                 <h2 class="biolink__title">Carlos Ríos</h2>
                 <p class="biolink__subtitle">Automatiza tus ventas y domina la IA</p>
-                
-                <!-- Redes Sociales -->
-                <div class="biolink__socials">
-                    <a href="#" class="biolink__social-link biolink__social-link--instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    <a href="#" class="biolink__social-link biolink__social-link--linkedin" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="#" class="biolink__social-link biolink__social-link--youtube" aria-label="YouTube"><i data-lucide="youtube"></i></a>
-                    <a href="#" class="biolink__social-link biolink__social-link--whatsapp" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
-                    <a href="#" class="biolink__social-link" aria-label="Web"><i data-lucide="globe"></i></a>
-                </div>
-            </div>
-
-            <div class="biolink__content reveal active">
-                
                 <!-- Freebuff -->
                 <a href="https://freebuff.com/get-started?ref=ref-d7300852-6168-4fe8-a17a-1415c4826393&referrer=Carlos+Rios" class="biolink__card biolink__card--primary" target="_blank" rel="noopener noreferrer">
                     <div class="biolink__badge biolink__badge--yellow">GRATIS</div>
@@ -60,17 +47,17 @@
                 </a>
 
                 <div class="biolink__divider">
-                    <span>⬇️ Muchas clases por aquí! ⬇️</span>
+                    <span>⬇️ Toda la atención es por telegram ⬇️</span>
                 </div>
 
                 <!-- MasterCRM -->
                 <a href="https://wa.me/51990473216?text=Hola,%20deseo%20mas%20información%20sobre%20el%20CRM" class="biolink__card biolink__card--pink" target="_blank" rel="noopener noreferrer">
-                    <div class="biolink__badge biolink__badge--yellow">🔥 ÚLTIMOS CUPOS</div>
+                    <div class="biolink__badge biolink__badge--yellow">40% DSCTO</div>
                     <img src="images/crm2.webp" alt="MasterCRM" class="biolink__card-img-circle" loading="lazy">
                     <div class="biolink__card-text">
                         <h3 class="biolink__card-title">MasterCRM</h3>
                         <p class="biolink__card-desc">Próxima fecha: 08/08 (y 22/08)</p>
-                        <div class="countdown-timer" data-date="2026-08-30T23:59:59">
+                        <div class="countdown-timer" id="timer-crm">
                             <div class="timer-box"><span class="days">00</span>d</div>
                             <div class="timer-box"><span class="hours">00</span>h</div>
                             <div class="timer-box"><span class="mins">00</span>m</div>
@@ -82,12 +69,12 @@
 
                 <!-- Tienda Online -->
                 <a href="https://demo-tienda.evolucioncuantica.site/" class="biolink__card biolink__card--purple" target="_blank" rel="noopener noreferrer">
-                    <div class="biolink__badge biolink__badge--yellow">📚 INICIO 24/08</div>
+                    <div class="biolink__badge biolink__badge--yellow">50% DSCTO</div>
                     <img src="images/tienda-online.webp" alt="Tienda Online" class="biolink__card-img-circle" loading="lazy">
                     <div class="biolink__card-text">
                         <h3 class="biolink__card-title">Tienda Online</h3>
                         <p class="biolink__card-desc">E-commerce desde cero para tu negocio</p>
-                        <div class="countdown-timer" data-date="2026-08-24T00:00:00">
+                        <div class="countdown-timer" id="timer-tienda">
                             <div class="timer-box"><span class="days">00</span>d</div>
                             <div class="timer-box"><span class="hours">00</span>h</div>
                             <div class="timer-box"><span class="mins">00</span>m</div>
@@ -99,7 +86,7 @@
 
                 <!-- Creador de Miniseries -->
                 <a href="#" class="biolink__card biolink__card--green" target="_blank" rel="noopener noreferrer">
-                    <div class="biolink__badge biolink__badge--yellow">💬 ATENCIÓN DIRECTA</div>
+                    <div class="biolink__badge biolink__badge--yellow">MUY PRONTO</div>
                     <div class="biolink__card-icon-round biolink__card-icon-round--dark"><i data-lucide="video"></i></div>
                     <div class="biolink__card-text">
                         <h3 class="biolink__card-title">Creador de Miniseries</h3>
@@ -110,7 +97,7 @@
 
                 <!-- Autopublicador -->
                 <a href="#" class="biolink__card biolink__card--blue" target="_blank" rel="noopener noreferrer">
-                    <div class="biolink__badge biolink__badge--green">✨ POPULAR</div>
+                    <div class="biolink__badge biolink__badge--yellow">VENTAS DESACTIVADAS</div>
                     <img src="images/autopublicador.webp" alt="Autopublicador" class="biolink__card-img-circle" loading="lazy">
                     <div class="biolink__card-text">
                         <h3 class="biolink__card-title">Autopublicador de Grupos FB</h3>
@@ -125,7 +112,7 @@
 
                 <!-- Landing Page -->
                 <a href="#" class="biolink__card biolink__card--light" target="_blank" rel="noopener noreferrer">
-                    <div class="biolink__badge biolink__badge--green">NUEVO</div>
+                    <div class="biolink__badge biolink__badge--yellow">NUEVO</div>
                     <div class="biolink__card-icon-round biolink__card-icon-round--pink"><i data-lucide="layout"></i></div>
                     <div class="biolink__card-text text-dark">
                         <h3 class="biolink__card-title text-dark">Creación/Diseño de Landing Page</h3>
@@ -145,22 +132,51 @@
                 </a>
 
             </div>
+
+            <!-- Redes Sociales -->
+            <div class="biolink__socials" style="margin-top: 2rem;">
+                <a href="#" class="biolink__social-link biolink__social-link--instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" class="biolink__social-link biolink__social-link--linkedin" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="biolink__social-link biolink__social-link--youtube" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                <a href="#" class="biolink__social-link biolink__social-link--whatsapp" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                <a href="#" class="biolink__social-link" aria-label="Web"><i data-lucide="globe"></i></a>
+            </div>
         </div>
     </section>
 
     <!-- Timer Script -->
     <script>
+        function getTargetDate(timerId) {
+            const storageKey = 'targetDate_' + timerId;
+            let storedDate = localStorage.getItem(storageKey);
+            const now = new Date().getTime();
+            
+            // 24 horas en milisegundos
+            const timeToAdd = 24 * 60 * 60 * 1000;
+
+            if (!storedDate || now > parseInt(storedDate)) {
+                // Generar nueva fecha límite (+24 horas)
+                storedDate = now + timeToAdd;
+                localStorage.setItem(storageKey, storedDate);
+            }
+            return parseInt(storedDate);
+        }
+
         function updateTimers() {
             const timers = document.querySelectorAll('.countdown-timer');
             const now = new Date().getTime();
 
             timers.forEach(timer => {
-                const targetDate = new Date(timer.getAttribute('data-date')).getTime();
-                const distance = targetDate - now;
+                const timerId = timer.getAttribute('id');
+                if(!timerId) return;
+                
+                let targetDate = getTargetDate(timerId);
+                let distance = targetDate - now;
 
+                // En caso límite (justo se acabó durante el setInterval)
                 if (distance < 0) {
-                    timer.style.display = 'none';
-                    return;
+                    targetDate = getTargetDate(timerId); // Obtendrá una nueva de +24h
+                    distance = targetDate - now;
                 }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
