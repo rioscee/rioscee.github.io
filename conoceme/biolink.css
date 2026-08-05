@@ -436,8 +436,8 @@ h4 {
 .biolink__content {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    padding-top: 0.5rem; /* Dar un poco de espacio para la etiqueta superior */
+    gap: 2rem; /* Aumentado el espacio entre elementos */
+    padding-top: 1rem; /* Más espacio arriba */
 }
 
 /* Divisor de texto */
@@ -459,7 +459,7 @@ h4 {
 .biolink__card-wrapper {
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .biolink__card {
