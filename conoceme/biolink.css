@@ -340,13 +340,14 @@ h4 {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
     min-height: 100vh;
-    background: radial-gradient(circle at top, rgba(37, 99, 235, 0.15) 0%, rgba(5, 10, 20, 1) 70%);
+    background-color: #eba1a1; /* Color durazno/rosado claro */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Cambio de center a flex-start para que los items suban */
+    justify-content: center;
 }
 
 .biolink__container {
-    max-width: 32rem; /* 512px */
+    max-width: 38rem; /* Un poco más ancho para las tarjetas */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -356,21 +357,18 @@ h4 {
 
 .biolink__header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Avatar de perfil con efectos y aspect-ratio */
+/* Avatar de perfil */
 .biolink__avatar-wrapper {
     width: 7.5rem;
     height: 7.5rem;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(135deg, var(--primary), var(--accent), #f472b6);
     border-radius: 50%;
-    padding: 3px;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
-    animation: neonPulse 3s infinite alternate;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .biolink__avatar {
@@ -378,7 +376,7 @@ h4 {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--bg-dark);
+    border: 3px solid white;
     aspect-ratio: 1 / 1;
 }
 
@@ -386,74 +384,55 @@ h4 {
 .biolink__title {
     font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
     font-weight: 800;
-    color: white;
-    margin-bottom: 0.5rem;
+    color: #1f2937; /* Texto oscuro para fondo claro */
+    margin-bottom: 0.25rem;
 }
 
 .biolink__subtitle {
     font-size: 1rem; /* Exacto 20px */
-    color: var(--text-muted);
+    color: #4b5563; /* Texto secundario oscuro */
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /* Redes sociales */
 .biolink__socials {
     display: flex;
     justify-content: center;
-    gap: 1.25rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .biolink__social-link {
-    color: var(--text-muted);
+    color: #1f2937; /* Iconos oscuros */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .biolink__social-link svg {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: 1.25rem;
+    height: 1.25rem;
     transition: transform 0.3s ease;
 }
 
 .biolink__social-link:hover {
     color: white;
-    transform: translateY(-4px);
-    background-color: rgba(255, 255, 255, 0.07);
+    transform: translateY(-3px);
+    background-color: #1f2937;
 }
 
 .biolink__social-link:hover svg {
     transform: scale(1.15);
 }
 
-/* Colores específicos de marcas para redes sociales con brillo */
-.biolink__social-link--tiktok:hover {
-    color: #00f2fe;
-    border-color: rgba(0, 242, 254, 0.4);
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
-}
-
-.biolink__social-link--whatsapp:hover {
-    color: #25d366;
-    border-color: rgba(37, 211, 102, 0.4);
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
-}
-
-.biolink__social-link--instagram:hover {
-    color: #e1306c;
-    border-color: rgba(225, 48, 108, 0.4);
-    box-shadow: 0 0 15px rgba(225, 48, 108, 0.3);
-}
-
-/* Contenido Principal con Rendimiento content-visibility */
+/* Contenido Principal */
 .biolink__content {
     display: flex;
     flex-direction: column;
@@ -462,364 +441,184 @@ h4 {
     contain-intrinsic-size: 1px 600px;
 }
 
-/* Botón de WhatsApp Destacado */
-.biolink__whatsapp-btn {
+/* Divisor de texto */
+.biolink__divider {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.biolink__divider span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #374151;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+}
+
+/* --- DISEÑO DE TARJETAS (CARDS) ESTILO LINKTREE --- */
+.biolink__card {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
-    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
-    color: white;
-    padding: 1.1rem 1.25rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-}
-
-.biolink__whatsapp-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-}
-
-.biolink__whatsapp-btn:hover {
-    transform: translateY(-3px) scale(1.01);
-    box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.5), 0 0 10px rgba(37, 211, 102, 0.2);
-}
-
-.biolink__whatsapp-btn:hover::before {
-    transform: translateX(100%);
-}
-
-.biolink__whatsapp-icon {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.6rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-shrink: 0;
-    animation: iconPulse 2s infinite ease-in-out;
-}
-
-.biolink__whatsapp-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.biolink__whatsapp-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 1.2;
-}
-
-.biolink__whatsapp-subtitle {
-    font-size: 0.8rem;
-    color: #e8f5e9;
-    opacity: 0.9;
-    margin-top: 0.1rem;
-}
-
-/* Contenedor e Items de la Lista de Opciones */
-.biolink__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(0.5rem, 0.3rem + 1.5vw, 1rem);
-}
-
-.biolink__item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 0.1rem 1rem;
-    align-items: center;
-    background-color: #111a2e; /* Fondo con alto contraste */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde con más contraste */
-    padding: 1.1rem;
+    padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
     border-radius: 1rem;
     position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más definida */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     cursor: pointer;
-}
-
-.biolink__item:hover {
-    transform: translateY(-4px);
-}
-
-/* Modificadores de color para tarjetas */
-.biolink__item--blue:hover {
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.15);
-}
-
-.biolink__item--purple:hover {
-    border-color: rgba(168, 85, 247, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 85, 247, 0.15);
-}
-
-.biolink__item--cyan:hover {
-    border-color: rgba(6, 182, 212, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(6, 182, 212, 0.15);
-}
-
-.biolink__item--amber:hover {
-    border-color: rgba(245, 158, 11, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.15);
-}
-
-.biolink__item--emerald:hover {
-    border-color: rgba(16, 185, 129, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(16, 185, 129, 0.15);
-}
-
-.biolink__item--rose:hover {
-    border-color: rgba(244, 114, 182, 0.4);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 114, 182, 0.15);
-}
-
-/* Iconos de la tarjeta */
-.biolink__item-icon {
-    grid-column: 1;
-    grid-row: 1;
-    width: 2rem; /* Shrunk to 2rem */
-    height: 2rem;
-    border-radius: 0.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.biolink__item-icon svg,
-.biolink__item-icon i {
-    width: 1.15rem;
-    height: 1.15rem;
-}
-
-.biolink__item:hover .biolink__item-icon {
-    transform: scale(1.1);
-}
-
-/* Modificadores de Iconos */
-.biolink__item-icon--blue {
-    background-color: rgba(37, 99, 235, 0.12);
-    color: #60a5fa;
-}
-
-.biolink__item-icon--purple {
-    background-color: rgba(147, 51, 234, 0.12);
-    color: #c084fc;
-}
-
-.biolink__item-icon--cyan {
-    background-color: rgba(8, 145, 178, 0.12);
-    color: #22d3ee;
-}
-
-.biolink__item-icon--amber {
-    background-color: rgba(217, 119, 6, 0.12);
-    color: #fbbf24;
-}
-
-.biolink__item-icon--emerald {
-    background-color: rgba(5, 150, 105, 0.12);
-    color: #34d399;
-}
-
-.biolink__item-icon--rose {
-    background-color: rgba(225, 29, 72, 0.12);
-    color: #f472b6;
-}
-
-.biolink__item-title {
-    grid-column: 2;
-    grid-row: 1;
-    font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
-    font-weight: 700;
-    color: white;
-    transition: color 0.3s;
-    line-height: 1.2;
-}
-
-/* Aplicamos color de hover en base a la tarjeta */
-.biolink__item--blue:hover .biolink__item-title { color: #60a5fa; }
-.biolink__item--purple:hover .biolink__item-title { color: #c084fc; }
-.biolink__item--cyan:hover .biolink__item-title { color: #22d3ee; }
-.biolink__item--amber:hover .biolink__item-title { color: #fbbf24; }
-.biolink__item--emerald:hover .biolink__item-title { color: #34d399; }
-.biolink__item--rose:hover .biolink__item-title { color: #f472b6; }
-
-.biolink__item-desc {
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    font-size: 0.95rem; /* ~15.2px description */
-    color: var(--text-muted);
-    line-height: 1.35;
-}
-
-/* Indicador de acción (chevron) */
-.biolink__item-chevron {
-    grid-column: 3;
-    grid-row: 1;
-    color: var(--text-muted);
-    opacity: 0.4;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.biolink__item:hover .biolink__item-chevron {
-    transform: translateX(5px);
-    opacity: 1;
-    color: white;
-}
-
-/* --- ANIMACIONES --- */
-@keyframes neonPulse {
-    0% {
-        box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
-    }
-    100% {
-        box-shadow: 0 0 30px rgba(6, 182, 212, 0.8), 0 0 12px rgba(244, 114, 182, 0.6);
-    }
-}
-
-@keyframes iconPulse {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
-    }
-}
-
-/* --- DISEÑO DE TARJETAS (CARDS 2x2) --- */
-.biolink__card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    gap: clamp(0.25rem, 0.15rem + 1vw, 0.4rem) clamp(0.5rem, 0.4rem + 1.2vw, 0.8rem);
-    align-items: center;
-    background-color: #111a2e; /* Fondo con alto contraste */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde con más contraste */
-    padding: clamp(0.65rem, 0.4rem + 1.2vw, 1.25rem);
-    border-radius: 1rem;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más definida */
-    cursor: pointer;
-    text-align: left;
     text-decoration: none;
-    color: inherit;
+    color: white; /* Texto blanco por defecto para tarjetas coloridas */
+    overflow: visible; /* Para que salga el badge */
 }
 
 .biolink__card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge (Etiqueta superior izquierda) */
+.biolink__badge {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    border-radius: 0.25rem;
+    color: #111827;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.biolink__badge--yellow {
+    background-color: #fbbf24;
+}
+
+.biolink__badge--green {
+    background-color: #34d399;
 }
 
 /* Modificadores de color para tarjetas */
-.biolink__card--blue {
-    border-color: rgba(205, 222, 249, 0.4);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(59, 130, 246, 0.2);
-    background-color: rgba(104, 126, 176, 0.266);
-    color: #60a5fa;
+.biolink__card--primary {
+    background-color: #8b5cf6; /* Morado claro (Freebuff) */
 }
+
+.biolink__card--pink {
+    background-color: #e11d48; /* Fucsia */
+}
+
 .biolink__card--purple {
-    border-color: rgba(205, 222, 249, 0.4);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(59, 130, 246, 0.2);
-    background-color: rgba(104, 126, 176, 0.266);
-    color: #c084fc;
-}
-.biolink__card--cyan {
-    border-color: rgba(205, 222, 249, 0.4);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(59, 130, 246, 0.2);
-    background-color: rgba(104, 126, 176, 0.266);
-    color: #22d3ee;
-}
-.biolink__card--emerald {
-    border-color: rgba(205, 222, 249, 0.4);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(59, 130, 246, 0.2);
-    background-color: rgba(104, 126, 176, 0.266);
-    color: #34d399;
+    background-color: #4c1d95; /* Morado oscuro */
 }
 
-.biolink__card img {
-        width: 45px;
-        height: 30px;
-        object-fit: contain;
+.biolink__card--green {
+    background-color: #166534; /* Verde oscuro */
 }
 
-.biolink__card:hover .biolink__card-icon {
-    transform: scale(1.1);
+.biolink__card--blue {
+    background-color: #2563eb; /* Azul oscuro */
 }
 
-.biolink__card-icon svg,
-.biolink__card-icon i,
-.biolink__card-icon img {
-    width: 1.15rem;
-    height: 1.15rem;
-    object-fit: contain;
+.biolink__card--light {
+    background-color: #fef0f0; /* Beige/Rosado claro */
+    color: #1f2937 !important;
+}
+
+.text-dark {
+    color: #1f2937 !important;
+}
+
+/* Elementos visuales dentro de la tarjeta (Icono / Imagen) */
+.biolink__card-icon-round {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.biolink__card-icon-round--dark {
+    background-color: #1f2937;
+    color: white;
+}
+
+.biolink__card-icon-round--pink {
+    background-color: #fbcfe8;
+    color: #e11d48;
+}
+
+.biolink__card-img-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: white;
+}
+
+/* Contenedor de texto de la tarjeta */
+.biolink__card-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .biolink__card-title {
-    grid-column: 2;
-    grid-row: 1;
-    font-size: clamp(0.85rem, 0.75rem + 0.5vw, 1.15rem);
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
     font-weight: 700;
-    color: white;
-    transition: color 0.3s;
     line-height: 1.2;
+    margin-bottom: 0.15rem;
 }
-
-/* Colores de hover del título */
-.biolink__card--blue:hover .biolink__card-title { color: #60a5fa; }
-.biolink__card--purple:hover .biolink__card-title { color: #c084fc; }
-.biolink__card--cyan:hover .biolink__card-title { color: #22d3ee; }
-.biolink__card--emerald:hover .biolink__card-title { color: #34d399; }
 
 .biolink__card-desc {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
-    color: var(--text-muted);
-    line-height: 1.35;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
 }
 
-/* Modificadores de color y estructura para la quinta tarjeta (Full-width) */
-.biolink__card--amber:hover {
-    color: #fbbf24;
+/* Icono de flecha/acción a la derecha */
+.biolink__card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: transform 0.3s;
 }
-.biolink__card-icon--amber {
-    background-color: rgba(217, 119, 6, 0.12);
-    color: #fbbf24;
+
+.biolink__card:hover .biolink__card-arrow {
+    transform: translateX(4px);
+    opacity: 1;
 }
-.biolink__card--amber:hover .biolink__card-title {
-    color: #fbbf24;
+
+/* Estilos de Contadores de tiempo */
+.countdown-timer {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
 }
-.biolink__card--full {
-    grid-column: 1 / -1;
-    background: linear-gradient(135deg, rgba(217, 119, 6, 0.273) 0%, rgba(17, 26, 46, 0.95) 50%, rgba(225, 29, 71, 0.273) 100%);
-    border: 1px solid rgba(245, 158, 11, 0.3);
+
+.timer-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    gap: 0.1rem;
 }
-.biolink__card--full:hover {
-    background: linear-gradient(135deg, rgba(217, 119, 6, 0.25) 0%, rgba(17, 26, 46, 0.9) 50%, rgba(225, 29, 72, 0.2) 100%);
-    border-color: rgba(245, 158, 11, 0.5);
-    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.25);
+
+.biolink__card--light .timer-box {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.timer-box span {
+    font-size: 0.9rem;
 }
