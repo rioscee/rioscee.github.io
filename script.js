@@ -9,11 +9,11 @@ async function loadNavbar() {
     if (!placeholder) return;
 
     try {
-        // Detect if we are inside a subdirectory (like /conoceme/ or /tools/)
+        // Detect if we are inside a subdirectory (like /biolink/ or /tools/)
         const path = window.location.pathname;
-        const isSubdir = path.includes('/conoceme/') || path.includes('/tools/') || path.includes('/mercado-afiliacion/') ||
-                         path.endsWith('/conoceme') || path.endsWith('/tools') || path.endsWith('/mercado-afiliacion') ||
-                         path.includes('\\conoceme\\') || path.includes('\\tools\\') || path.includes('\\mercado-afiliacion\\');
+        const isSubdir = path.includes('/biolink/') || path.includes('/conoceme/') || path.includes('/tools/') || path.includes('/mercado-afiliacion/') ||
+                         path.endsWith('/biolink') || path.endsWith('/conoceme') || path.endsWith('/tools') || path.endsWith('/mercado-afiliacion') ||
+                         path.includes('\\biolink\\') || path.includes('\\conoceme\\') || path.includes('\\tools\\') || path.includes('\\mercado-afiliacion\\');
         
         const navbarPath = isSubdir ? '../navbar.html' : 'navbar.html';
         const response = await fetch(navbarPath);
