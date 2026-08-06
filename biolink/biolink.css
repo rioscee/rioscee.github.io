@@ -621,12 +621,18 @@ p {
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-    opacity: 0.7;
+    opacity: 0.85;
     transition: transform 0.3s;
 }
 
+.biolink__card-telegram-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
 .biolink__card:hover .biolink__card-arrow {
-    transform: translateX(4px);
+    transform: scale(1.1);
     opacity: 1;
 }
 
