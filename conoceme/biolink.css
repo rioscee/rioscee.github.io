@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: #f8fafc;
     color: var(--text-main);
     font-family: 'Outfit', sans-serif;
     line-height: 1.5;
@@ -334,13 +334,30 @@ h4 {
     color: #6b7280;
 }
 
+body {
+    background-color: #f8fafc;
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+p {
+    font-size: 1.25rem; /* 20px */
+}
 
 /* --- SECCIÓN BIOLINK --- */
 .biolink {
     padding-top: 2rem;
     padding-bottom: 5rem;
     min-height: 100vh;
-    background-color: #eba1a1; /* Color durazno/rosado claro */
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
     display: flex;
     align-items: flex-start; /* Cambio de center a flex-start para que los items suban */
     justify-content: center;
