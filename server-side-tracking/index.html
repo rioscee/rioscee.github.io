@@ -1328,9 +1328,6 @@
 
           <div style="display:flex; flex-direction:column; gap:12px; margin-top:20px">
             <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap">
-              <button onclick="openExtensionModal()" class="btn" style="padding:14px 28px; font-size:15px; background:rgba(234, 88, 12, 0.45); border:1px solid rgba(234, 88, 12, 0.6); box-shadow:0 4px 18px rgba(234,88,12,0.2)">
-                📦 Solicita el ZIP instalador manual GRATIS
-              </button>
               <span style="font-size:12.5px; color:var(--text-muted)">Compatible con Chrome, Brave, Edge y Opera</span>
             </div>
           </div>
@@ -1597,39 +1594,6 @@
       setTimeout(updateNetworkLines, 500);
       setInterval(updateNetworkLines, 120);
 
-      window.closeExtModal = function() {
-        var el = document.getElementById('extGuideModal');
-        if (el) el.style.display = 'none';
-      };
-      window.openExtensionModal = function() {
-        var existing = document.getElementById('extGuideModal');
-        if (existing) { existing.style.display = 'flex'; return; }
-        var m = document.createElement('div');
-        m.id = 'extGuideModal';
-        m.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); z-index:99999; display:flex; align-items:center; justify-content:center; padding:20px;';
-        m.innerHTML = '<div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:20px; max-width:540px; width:100%; padding:32px; box-shadow:0 25px 60px rgba(0,0,0,0.8); position:relative; color:#fff">' +
-          '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px">' +
-            '<div style="display:flex; align-items:center; gap:12px">' +
-              '<div style="width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #f97316, #ea580c); display:flex; align-items:center; justify-content:center; font-size:20px">⚡</div>' +
-              '<div><h3 style="font-family:Space Grotesk,sans-serif; font-size:18px; font-weight:800; margin:0; color:#fff">Pixel Tracking Extension</h3><div style="font-size:11px; color:#10b981; font-weight:700">● Instalador Manual Gratuito (v1.2.0)</div></div>' +
-            '</div>' +
-            '<button onclick="closeExtModal()" style="background:transparent; border:none; color:var(--text-muted); font-size:24px; cursor:pointer; line-height:1">✕</button>' +
-          '</div>' +
-          '<div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:10px; padding:12px; margin-bottom:18px; font-size:12.5px; color:#fde68a; line-height:1.5">' +
-            '🛍️ La extensión está actualmente en fase de revisión para la <strong>Chrome Web Store</strong>. Mientras tanto, puedes usarla de forma 100% gratuita instalándola manualmente en tu navegador en 3 sencillos pasos.' +
-          '</div>' +
-          '<div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px; font-size:13px; color:var(--text-secondary)">' +
-            '<div style="display:flex; gap:10px"><strong>1.</strong><span>Descarga la carpeta de la extensión o el archivo ZIP.</span></div>' +
-            '<div style="display:flex; gap:10px"><strong>2.</strong><span>Abre Chrome y ve a <code style="background:var(--bg-input); padding:2px 6px; border-radius:4px; color:#f97316">chrome://extensions</code> y activa el <strong>Modo de desarrollador</strong> (arriba a la derecha).</span></div>' +
-            '<div style="display:flex; gap:10px"><strong>3.</strong><span>Haz clic en <strong>Cargar descomprimida</strong> y selecciona la carpeta. ¡Listo!</span></div>' +
-          '</div>' +
-          '<div style="display:flex; gap:12px; flex-wrap:wrap">' +
-            '<a href="#" class="btn btn-edge" style="flex:1; text-align:center; padding:12px; font-size:14px">Disponible en Microsoft Edge</a>' +
-            '<button onclick="closeExtModal()" class="btn btn-ghost" style="padding:12px 20px; font-size:14px">Entendido</button>' +
-          '</div>' +
-        '</div>';
-        document.body.appendChild(m);
-      };
     })();
   </script>
 
