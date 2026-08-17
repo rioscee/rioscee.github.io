@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Pixel Analytics Suite</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    color: #1f2937;
+    background: #f9fafb;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    background: #ffffff;
+    border-left: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    min-height: 100vh;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; color: #111827; }
+  h2 { font-size: 1.25rem; margin: 40px 0 8px; color: #111827; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .updated { color: #6b7280; font-size: 0.9rem; margin-bottom: 28px; }
+  .highlight {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 20px 0;
+  }
+  .muted { color: #6b7280; font-size: 0.85rem; margin-top: 48px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated"><strong>Pixel Analytics Suite</strong> — Last updated: August 17, 2026</p>
+
+  <div class="highlight">
+    <strong>In short:</strong> all inspection data stays on your device, and nothing is collected, stored or sold by the developer.
+  </div>
+
+  <h2>Overview</h2>
+  <p>
+    Pixel Analytics Suite is a browser extension that helps you inspect tracking pixels
+    (Meta, TikTok, Google, Pinterest, LinkedIn) on the pages you visit. This policy explains
+    what data the extension processes and how.
+  </p>
+
+  <h2>What the extension processes</h2>
+
+  <p><strong>1. Data processed locally on your device (never transmitted):</strong></p>
+  <ul>
+    <li>The URL and title of the active tab, used to associate detected events with the page you are viewing.</li>
+    <li>Network request URLs to known tracking endpoints, used to detect which pixels fire and which events they send.</li>
+    <li>Page context such as <code>window.fbq</code>, <code>ttq</code> and <code>dataLayer</code> calls, used to capture event parameters.</li>
+    <li>The inspection results shown in the side panel.</li>
+  </ul>
+  <p>
+    All of this data exists only in the open side panel on your machine. It is not stored, logged, or transmitted anywhere.
+  </p>
+
+  <p><strong>2. Local storage (<code>chrome.storage.local</code>):</strong></p>
+  <p>The extension stores three values on your device, all entered by you in the options page:</p>
+  <ul>
+    <li>Your optional server-side tracking worker URL.</li>
+    <li>Your access token for that worker.</li>
+    <li>A boolean preference (whether you dismissed an informational banner).</li>
+  </ul>
+  <p>
+    These values stay on your device and can be deleted at any time from the extension options.
+  </p>
+
+  <p><strong>3. Optional connection to your server-side tracking worker:</strong></p>
+  <p>
+    If you configure a worker URL and token in the options, the extension queries that worker to
+    display events collected server-side. This communication goes <strong>only to the URL you entered</strong>
+    and is protected by the token you configured. We (the developer) do not operate any server and
+    do not receive any of this data.
+  </p>
+
+  <h2>What the extension does NOT do</h2>
+  <ul>
+    <li>It does not collect, store or transmit browsing history, search history, passwords, or any personal data.</li>
+    <li>It does not use analytics, tracking or advertising of its own.</li>
+    <li>It does not sell or share any data with third parties.</li>
+    <li>It does not load remote code: all code is included in the extension package.</li>
+    <li>It does not block, modify or intercept network requests; it only reads them.</li>
+  </ul>
+
+  <h2>Permissions explained</h2>
+  <p>
+    The extension requests only the permissions needed for its single purpose (inspecting pixels):
+    <code>activeTab</code>, <code>storage</code>, <code>webRequest</code> (read-only),
+    <code>sidePanel</code>, <code>scripting</code>, <code>tabs</code>, and host permissions to
+    observe tracking endpoints and to run on the pages you visit. A full justification for each
+    permission is provided in the store listing.
+  </p>
+
+  <h2>Third-party services</h2>
+  <p>
+    The websites you visit may send their own requests to ad platforms (Meta, TikTok, Google, etc.)
+    as part of their own pixel implementations. Those requests are made by the websites' own code,
+    not by this extension, and are governed by those platforms' policies.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If we make changes to this policy, we will update this page and the extension listing accordingly.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For questions about this policy or the extension, contact us through the developer contact
+    email associated with this listing.
+  </p>
+
+  <p class="muted">Pixel Analytics Suite · Privacy Policy</p>
+</main>
+</body>
+</html>
