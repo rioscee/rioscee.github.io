@@ -782,6 +782,25 @@
     .service-grid { grid-template-columns: 1fr; }
     .benefits-grid { grid-template-columns: 1fr; }
   }
+
+  /* ---------- Responsive móvil ---------- */
+  .stage-mobile-static { display: none; }
+  .logos-track { flex-wrap: nowrap; }
+  @media (prefers-reduced-motion: reduce) {
+    .logos-track { animation: none; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .logos-track::-webkit-scrollbar { display: none; }
+  }
+  @media (max-width: 760px) {
+    /* Esconder botón Edge del navbar en móvil */
+    header .btn-edge { display: none !important; }
+    /* Botón Edge del hero: texto más pequeño, sin salto de línea */
+    .hero-cta-group .btn-edge { font-size: 12px !important; padding: 12px 14px !important; white-space: nowrap; }
+    .hero-cta-group { flex-wrap: wrap; justify-content: center; }
+    /* Stage: reemplazar animación rota por la imagen estática */
+    .hero-network-stage { margin: 28px auto 0; padding: 0; }
+    .hero-network-stage > *:not(.stage-mobile-static) { display: none; }
+    .stage-mobile-static { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); }
+  }
   </style>
 </head>
 <body>
@@ -834,6 +853,8 @@
 
       <!-- Stage con animación de integración de redes sociales y mockup central -->
       <div class="hero-network-stage">
+        <img class="stage-mobile-static" src="stage-mobile.png" alt="Panel de server-side tracking: PageView, InitiateCheckout y Purchase con score real" />
+
 
         <!-- Nodos flotantes que se integran al sistema -->
         <div class="floating-node node-meta" id="nodeMeta">
