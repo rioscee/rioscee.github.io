@@ -749,9 +749,10 @@
   .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 34px auto 30px; }
   .service-step { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px 18px; text-align: left; }
   .service-step .num {
-    width: 34px; height: 34px; border-radius: 9px; margin-bottom: 12px;
+    width: max-content; padding: 5px 12px; border-radius: 999px; margin-bottom: 12px;
     background: rgba(249,115,22,.15); color: var(--accent-orange);
-    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 11px; letter-spacing: .1em;
   }
   .service-step h3 { font-size: 15px; color: var(--text-primary); margin-bottom: 6px; }
   .service-step p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
@@ -1116,17 +1117,17 @@
         </p>
         <div class="service-grid">
           <div class="service-step">
-            <div class="num">1</div>
+            <div class="num">PASO 1</div>
             <h3>Escríbeme por WhatsApp</h3>
             <p>Me cuentas tu negocio, me pasas tu dominio y los píxeles que usas (Meta, TikTok, Google…).</p>
           </div>
           <div class="service-step">
-            <div class="num">2</div>
+            <div class="num">PASO 2</div>
             <h3>Instalo todo en tu cuenta</h3>
             <p>Configuro tu worker de tracking, tu panel y la conexión con tus píxeles. Todo dentro de <strong>TU</strong> cuenta de Cloudflare.</p>
           </div>
           <div class="service-step">
-            <div class="num">3</div>
+            <div class="num">PASO 3</div>
             <h3>Verifico que todo llegue</h3>
             <p>Instalo el script en tu web, pruebo los eventos y confirmo que tu score real suba. Listo para vender.</p>
           </div>
