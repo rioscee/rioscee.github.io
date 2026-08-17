@@ -739,6 +739,48 @@
   @media (prefers-reduced-motion: reduce) {
     .logos-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
   }
+  
+  .service-section { padding: 90px 0 40px; }
+  .service-panel {
+    border: 1px solid rgba(249,115,22,.35);
+    background: linear-gradient(180deg, rgba(249,115,22,.07), transparent 55%), var(--bg-surface);
+    border-radius: 18px; padding: 48px 28px; text-align: center;
+  }
+  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 34px auto 30px; }
+  .service-step { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px 18px; text-align: left; }
+  .service-step .num {
+    width: 34px; height: 34px; border-radius: 9px; margin-bottom: 12px;
+    background: rgba(249,115,22,.15); color: var(--accent-orange);
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;
+  }
+  .service-step h3 { font-size: 15px; color: var(--text-primary); margin-bottom: 6px; }
+  .service-step p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+  .benefits-section { padding: 40px 0; }
+  .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .benefit-card {
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px;
+  }
+  .benefit-card .ico { font-size: 24px; margin-bottom: 10px; }
+  .benefit-card h3 { font-size: 15.5px; color: var(--text-primary); margin-bottom: 6px; }
+  .benefit-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+  .faq-section { padding: 60px 0 90px; }
+  .faq-list { max-width: 780px; margin: 34px auto 0; display: grid; gap: 12px; }
+  .faq-item {
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px;
+  }
+  .faq-item summary {
+    cursor: pointer; font-weight: 700; color: var(--text-primary); font-size: 15px;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '▾'; color: var(--accent-orange); transition: transform .2s; flex-shrink: 0; }
+  .faq-item[open] summary::after { transform: rotate(180deg); }
+  .faq-item p { color: var(--text-secondary); font-size: 13.5px; line-height: 1.6; margin: 10px 0 0; }
+  .faq-item code { background: var(--bg-input); padding: 1px 6px; border-radius: 4px; font-size: 12.5px; }
+  @media (max-width: 760px) {
+    .service-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
   </style>
 </head>
 <body>
@@ -1326,6 +1368,89 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Servicio: Nosotros instalamos todo -->
+  <section class="service-section">
+    <div class="container">
+      <div class="service-panel">
+        <div class="section-badge">El Servicio</div>
+        <h2 class="section-title">Nosotros te instalamos <span style="color:var(--accent-orange)">todo</span>. Tú solo vendes más.</h2>
+        <p class="section-desc" style="max-width:720px; margin:0 auto 0">
+          No necesitas saber de código, servidores ni configuraciones. Nosotros hacemos toda la instalación del
+          server-side tracking en <strong style="color:var(--text-primary)">tu cuenta de Cloudflare</strong>,
+          conectamos tus píxeles y te dejamos todo funcionando.
+        </p>
+        <div class="service-grid">
+          <div class="service-step">
+            <div class="num">1</div>
+            <h3>Escríbeme por WhatsApp</h3>
+            <p>Me cuentas tu negocio, me pasas tu dominio y los píxeles que usas (Meta, TikTok, Google…).</p>
+          </div>
+          <div class="service-step">
+            <div class="num">2</div>
+            <h3>Instalo todo en tu cuenta</h3>
+            <p>Configuro tu worker de tracking, tu panel y la conexión con tus píxeles. Todo dentro de <strong>TU</strong> cuenta de Cloudflare.</p>
+          </div>
+          <div class="service-step">
+            <div class="num">3</div>
+            <h3>Verifico que todo llegue</h3>
+            <p>Instalo el script en tu web, pruebo los eventos y confirmo que tu score real suba. Listo para vender.</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:12px">
+          <a href="https://wa.me/51990473216?text=Quiero%20mas%20informaci%C3%B3n%20del%20server-side-tracking" target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size:17px; padding:16px 36px; background:#25d366; color:#fff; box-shadow:0 8px 24px rgba(37,211,102,.28)">
+            💬 Quiero que me lo instalen
+          </a>
+          <span style="font-size:12.5px; color:var(--text-muted)">Instalación única · Sin mensualidades · Tu sistema, en tu cuenta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios clave -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico">💸</div>
+          <h3>Pago único, sin mensualidades</h3>
+          <p>Pagas una sola vez por la instalación. El sistema es tuyo para siempre: sin suscripciones, sin cuotas ni mantenimiento mensual.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico">🔒</div>
+          <h3>Tus datos, siempre en tu servidor</h3>
+          <p>Todo vive en tu propia cuenta de Cloudflare. Tus datos, tus píxeles y tu panel son 100% tuyos: nadie más los ve, ni nosotros.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico">📈</div>
+          <h3>Deja de perder ventas invisibles</h3>
+          <p>El píxel del navegador pierde hasta el 45% de los eventos (iOS 14, Adblockers, Brave). Cada evento perdido es una venta que el algoritmo no aprende. Con server-side lo capturas todo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="faq-section">
+    <div class="container">
+      <div style="text-align:center">
+        <div class="section-badge">Preguntas Frecuentes</div>
+        <h2 class="section-title">Todo lo que necesitas saber</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>¿Cuánto cuesta? ¿Hay mensualidades?</summary><p><strong>Pago único.</strong> Pagas una sola vez por la instalación completa. El sistema queda en tu cuenta de Cloudflare y es tuyo para siempre, sin mensualidades ni mantenimiento. El precio depende de tus píxeles y plataformas: escríbeme y te doy el tuyo exacto.</p></details>
+        <details class="faq-item"><summary>¿Necesito conocimientos técnicos?</summary><p><strong>No.</strong> Nosotros hacemos toda la instalación por ti: configuramos el worker, el panel, los píxeles y el script. Solo necesitas una cuenta de Cloudflare gratuita (te ayudamos a crearla) y pasarnos tu dominio.</p></details>
+        <details class="faq-item"><summary>¿Dónde quedan mis datos?</summary><p>En <strong>tu cuenta de Cloudflare</strong>. Todo — eventos, píxeles, tokens, analítica — vive en tu servidor. Son 100% tuyos: ni nosotros ni ningún tercero puede verlos.</p></details>
+        <details class="faq-item"><summary>¿Tengo que mover mi web de hosting?</summary><p><strong>No.</strong> Tu web se queda donde está (Hostinger, DigitalOcean, WordPress, Shopify…). Solo agregamos un script en la cabecera, y opcionalmente un registro DNS para que tu tracking use un dominio propio.</p></details>
+        <details class="faq-item"><summary>¿Qué pasa con los bloqueadores de anuncios, Brave o iOS 14?</summary><p>Nada: los eventos viajan <strong>servidor a servidor</strong>, así que los bloqueadores y las restricciones de iOS no pueden tocarlos. Esa es exactamente la ventaja del server-side tracking.</p></details>
+        <details class="faq-item"><summary>¿Qué plataformas soporta?</summary><p>Meta (Facebook e Instagram), TikTok, Google Ads y GA4, Pinterest, LinkedIn y más. Puedes registrar varios píxeles por dominio, ideal si usas cuentas de respaldo.</p></details>
+        <details class="faq-item"><summary>¿Y si ya tengo un píxel instalado?</summary><p>Sin problema: lo integramos. Cada evento se identifica con su <code>event_id</code> para que <strong>no se duplique</strong> entre el navegador y el servidor.</p></details>
+        <details class="faq-item"><summary>¿Qué es el score de coincidencia (EMQ)?</summary><p>Es la nota (x/10) que Meta le da a tus eventos según la información que capturas. El píxel del navegador casi nunca pasa de 1-2/10. Con server-side subes a 7-9/10, y el panel te muestra el <strong>score real por evento</strong>.</p></details>
+        <details class="faq-item"><summary>¿Funciona con WordPress, Shopify o cualquier web?</summary><p>Funciona con <strong>cualquier web</strong>: solo un script en la cabecera. Y si usas WooCommerce o Shopify, mapeamos los eventos de compra automáticamente (ViewContent, AddToCart, InitiateCheckout, Purchase).</p></details>
       </div>
     </div>
   </section>
