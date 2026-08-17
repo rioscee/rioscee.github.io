@@ -800,6 +800,16 @@
     .hero-network-stage { margin: 28px auto 0; padding: 0; }
     .hero-network-stage > *:not(.stage-mobile-static) { display: none; }
     .stage-mobile-static { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); }
+    /* Sección Extensión: 1 columna y tarjetas apiladas */
+    .extension-section { padding: 60px 0; }
+    .extension-card { grid-template-columns: 1fr; padding: 28px 18px; gap: 28px; }
+    .ext-pill-grid { grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+    .ext-pill { padding: 14px; }
+    .ext-mockup { padding: 14px; }
+    /* Tabla comparativa: scroll horizontal en móvil */
+    .table-box { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .table-box table { min-width: 560px; }
+    .table-box th, .table-box td { padding: 12px 14px; font-size: 13px; }
   }
   </style>
 </head>
