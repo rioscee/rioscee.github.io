@@ -697,6 +697,8 @@
   }
 
   .btn-whatsapp:hover { background:#1ebe5b !important; }
+  .btn-edge { background:#ffffff; color:#1f2937; display:inline-flex; align-items:center; gap:10px; border:1px solid rgba(255,255,255,.25); box-shadow:0 8px 24px rgba(255,255,255,.08); }
+  .btn-edge:hover { background:#f3f4f6; transform: translateY(-1px); }
   .wa-float {
     position: fixed; right: 22px; bottom: 22px; z-index: 9999;
     display: flex; align-items: center; gap: 10px;
@@ -723,11 +725,11 @@
   <header>
     <div class="container nav-wrap">
       <a href="/" class="logo">
-        <div class="logo-icon">⚡</div>
+        <img src="data:image/png;base64,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" alt="Pixel Tracking Suite" style="width:28px; height:28px; border-radius:7px; flex-shrink:0">
         <span>Pixel Tracking Suite</span>
       </a>
       <div>
-        <a href="https://server-side-tracking.rioscee.workers.dev/admin" class="btn" style="padding:9px 22px; font-size:14px">Acceder al Panel →</a>
+        <a href="#" class="btn btn-edge" style="padding:8px 18px; font-size:13.5px" title="Disponible en Microsoft Edge (próximamente)"><svg width="17" height="17" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg> Disponible en Microsoft Edge</a>
       </div>
     </div>
   </header>
@@ -754,12 +756,8 @@
         <a href="https://wa.me/51990473216?text=Quiero%20mas%20informaci%C3%B3n%20del%20server-side-tracking" target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size:16px; padding:15px 28px; background:#25d366; color:#fff; box-shadow:0 8px 24px rgba(37,211,102,.28)">
           💬 Hablar por WhatsApp
         </a>
-        <a href="https://server-side-tracking.rioscee.workers.dev/admin" class="btn" style="font-size:16px; padding:15px 32px">
-          🚀 Ingresar al Panel de Gestión
-        </a>
-        <a href="#features" class="btn btn-ghost" style="font-size:16px; padding:15px 28px">
-          Ver Cómo Funciona ▾
-        </a>
+        <a href="#" class="btn btn-edge" style="padding:15px 28px; font-size:16px" title="Disponible en Microsoft Edge (próximamente)"><svg width="20" height="20" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg> Disponible en Microsoft Edge</a>
+        
       </div>
 
       <div class="proof-badges">
@@ -853,7 +851,7 @@
               <span class="mockup-dot" style="background:#10b981"></span>
             </div>
             <div style="background:var(--bg-card); padding:4px 14px; border-radius:6px; border:1px solid var(--border); font-size:11px; color:var(--text-muted); display:flex; align-items:center; gap:6px">
-              <span style="color:#10b981">🔒</span> https://app.pixeltracking.io/admin
+              <span style="color:#10b981">🔒</span> https://app.pixeltracking.io
             </div>
             <div style="font-size:11px; color:var(--text-muted)">⚡ Cloudflare Edge 12ms</div>
           </div>
@@ -1156,14 +1154,15 @@
         <!-- Columna Izquierda: Información y Propuesta de Valor -->
         <div>
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap">
-            <div style="background:#ffffff; border:1px solid #e2e8f0; padding:6px 14px; border-radius:10px; display:inline-flex; align-items:center; box-shadow:0 4px 14px rgba(0,0,0,0.15)">
-              <img src="data:image/png;base64,${CHROME_STORE_BADGE_BASE64}" alt="Available in the Chrome Web Store" style="width:100%; max-width:210px; height:auto; display:block" />
+            <div style="background:#ffffff; border:1px solid #e2e8f0; padding:8px 16px; border-radius:10px; display:inline-flex; align-items:center; gap:10px; box-shadow:0 4px 14px rgba(0,0,0,0.15)">
+              <svg width="22" height="22" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg>
+              <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; color:#1f2937; font-size:14px">Microsoft Edge Add-ons</span>
             </div>
-            <span style="font-size:11px; background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:5px 12px; border-radius:6px; font-weight:800; text-transform:uppercase">● Muy pronto</span>
+            <span style="font-size:11px; background:rgba(245,158,11,0.15); color:#f59e0b; border:1px solid rgba(245,158,11,0.3); padding:5px 12px; border-radius:6px; font-weight:800; text-transform:uppercase">● En revisión en la Store</span>
           </div>
 
           <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(26px, 3.5vw, 38px); font-weight:800; margin:16px 0 12px; line-height:1.2">
-            Extensión Oficial de Chrome: <br>
+            Extensión para Microsoft Edge: <br>
             <span style="background:linear-gradient(135deg, #ffffff 30%, #3b82f6 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Auditoría & Debugging CAPI en Vivo</span>
           </h2>
 
@@ -1327,9 +1326,7 @@
         <p style="font-size:18px; color:var(--text-secondary); max-width:650px; margin:0 auto 32px">
           Comienza a capturar el 100% de tus ventas, sube tu Event Match Quality y dale a los algoritmos de Meta y Google la data exacta que necesitan para bajar tus costos por compra.
         </p>
-        <a href="https://server-side-tracking.rioscee.workers.dev/admin" class="btn" style="font-size:17px; padding:16px 36px">
-          🚀 Acceder a la Consola de Administración
-        </a>
+        <a href="#" class="btn btn-edge" style="padding:15px 28px; font-size:16px" title="Disponible en Microsoft Edge (próximamente)"><svg width="20" height="20" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg> Disponible en Microsoft Edge</a>
       </div>
     </div>
   </section>
@@ -1453,7 +1450,7 @@
             '<div style="display:flex; gap:10px"><strong>3.</strong><span>Haz clic en <strong>Cargar descomprimida</strong> y selecciona la carpeta. ¡Listo!</span></div>' +
           '</div>' +
           '<div style="display:flex; gap:12px; flex-wrap:wrap">' +
-            '<a href="https://server-side-tracking.rioscee.workers.dev/admin" class="btn" style="flex:1; text-align:center; padding:12px; font-size:14px">🚀 Ingresar al Panel de Gestión</a>' +
+            '<a href="#" class="btn btn-edge" style="flex:1; text-align:center; padding:12px; font-size:14px">Disponible en Microsoft Edge</a>' +
             '<button onclick="closeExtModal()" class="btn btn-ghost" style="padding:12px 20px; font-size:14px">Entendido</button>' +
           '</div>' +
         '</div>';
