@@ -516,6 +516,13 @@ p {
     height: 1.25rem;
 }
 
+.biolink__mini-card-img {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.6rem;
+    object-fit: cover;
+}
+
 .biolink__mini-card-title {
     font-size: 0.7rem;
     font-weight: 700;
