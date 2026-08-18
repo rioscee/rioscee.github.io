@@ -517,9 +517,9 @@ p {
 }
 
 .biolink__mini-card-img {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.75rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0.85rem;
     object-fit: cover;
 }
 
