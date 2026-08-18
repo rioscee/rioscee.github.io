@@ -813,6 +813,34 @@
     .table-box table { min-width: 560px; }
     .table-box th, .table-box td { padding: 12px 14px; font-size: 13px; }
   }
+  
+  .story-section { padding: 90px 0 30px; }
+  .story-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  .story-video video {
+    width: 100%; height: auto; display: block;
+    border-radius: 16px; border: 1px solid var(--border);
+    box-shadow: 0 24px 70px rgba(0,0,0,.4);
+  }
+  .story-text .section-title { margin-bottom: 14px; }
+  .story-text p { font-size: 15.5px; line-height: 1.7; color: var(--text-secondary); margin: 0 0 16px; }
+  .story-lead { font-size: 26px !important; font-weight: 800; color: var(--accent-orange); font-family: 'Space Grotesk',sans-serif; }
+  .story-punch { font-size: 17px !important; }
+  .story-punch strong { color: var(--text-primary); }
+  .story-close {
+    margin-top: 22px; padding: 20px 22px; border-radius: 14px;
+    background: linear-gradient(135deg, rgba(249,115,22,.12), rgba(249,115,22,.04));
+    border: 1px solid rgba(249,115,22,.3);
+  }
+  .story-close p { margin: 0; font-size: 16.5px !important; color: var(--text-primary); }
+  .story-close p:first-child { margin-bottom: 6px; }
+  .story-close-accent { font-size: 18px !important; }
+  .story-close-accent strong { color: var(--accent-orange); }
+  @media (max-width: 760px) {
+    .story-section { padding: 56px 0 20px; }
+    .story-grid { grid-template-columns: 1fr; gap: 28px; }
+    .story-video { order: -1; }
+    .story-lead { font-size: 22px !important; }
+  }
   </style>
 </head>
 <body>
@@ -1129,6 +1157,31 @@
       </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- Sección: ¿Meta ve todas tus ventas? -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-video">
+          <video src="no-encontro-eventos.mp4" autoplay muted loop playsinline preload="auto" aria-label="Demo del panel detectando eventos de tracking"></video>
+        </div>
+        <div class="story-text">
+          <h2 class="section-title" style="text-align:left">¿Estás seguro de que Meta está viendo <span style="color:var(--accent-orange)">todas tus ventas</span>?</h2>
+          <p class="story-lead">Probablemente no.</p>
+          <p>Cada vez que alguien compra, completa un formulario o inicia una conversación por WhatsApp, necesitas que esa conversión llegue correctamente a tus plataformas publicitarias.</p>
+          <p>Pero entre <strong style="color:var(--text-primary)">iOS, Safari, AdBlockers, navegadores privados y restricciones de cookies</strong>, parte de esa información puede perderse.</p>
+          <p>Y cuando Meta no recibe la señal…</p>
+          <p class="story-punch"><strong>no sabe que esa persona convirtió.</strong></p>
+          <p>Eso significa menos datos para optimizar tus campañas, peor atribución y decisiones basadas en información incompleta.</p>
+          <div class="story-close">
+            <p><strong>Estás pagando por conseguir clientes.</strong></p>
+            <p class="story-close-accent"><strong>Asegúrate de que Meta se entere cuando los consigues.</strong></p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
