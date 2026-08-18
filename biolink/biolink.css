@@ -641,7 +641,7 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
-    margin-top: 15px;
+    margin: 15px 15px 35px 15px;
 }
 
 .biolink__duo-card {
