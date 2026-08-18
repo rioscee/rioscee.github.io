@@ -32,134 +32,124 @@
 <!-- =========================================
   HERO
 ========================================= -->
-<section class="hero" aria-labelledby="hero-heading" style="padding-top:72px;">
+<section class="hero" aria-labelledby="hero-heading" style="padding-top:72px; padding-bottom:64px;">
   <div class="container">
-    <div class="hero-inner">
 
-      <!-- Contenido -->
-      <div class="hero-content">
-        <span class="section-label reveal">
-          <span class="live-dot" aria-hidden="true"></span>
-          CRM Multicanal con IA · Horizontes IA
-        </span>
+    <!-- Texto centrado -->
+    <div class="hero-content" style="text-align:center; max-width:780px; margin-inline:auto;">
+      <span class="section-label reveal" style="justify-content:center; display:inline-flex; align-items:center; gap:6px;">
+        <span class="live-dot" aria-hidden="true"></span>
+        CRM Multicanal con IA · Horizontes IA
+      </span>
 
-        <h1 id="hero-heading" class="reveal reveal-delay-1">
-          Cada mensaje sin respuesta es un cliente que <span>se va con tu competencia</span>
-        </h1>
+      <h1 id="hero-heading" class="reveal reveal-delay-1" style="margin-top:16px;">
+        Cada mensaje sin respuesta es un cliente que <span>se va con tu competencia</span>
+      </h1>
 
-        <p class="reveal reveal-delay-2">
-          MasterCRM conecta Telegram, WhatsApp, Instagram y Messenger en un solo panel inteligente. Tu IA responde, califica leads y escala a ti solo cuando importa — las 24 horas, los 7 días.
+      <p class="reveal reveal-delay-2" style="margin-top:20px; margin-inline:auto; max-width:620px;">
+        MasterCRM conecta Telegram, WhatsApp, Instagram y Messenger en un solo panel inteligente. Tu IA responde, califica leads y escala a ti solo cuando importa — las 24 horas, los 7 días.
+      </p>
+
+      <!-- Social proof -->
+      <div class="hero-social-proof reveal reveal-delay-3" style="justify-content:center; margin-top:28px;">
+        <div class="hero-avatars" aria-hidden="true">
+          <span title="Ana">AN</span>
+          <span title="Carlos">CA</span>
+          <span title="María">MA</span>
+          <span title="Roberto">RO</span>
+        </div>
+        <p class="hero-social-text" style="margin:0; font-size:0.9rem;">
+          <strong>+340 negocios</strong> ya atienden con IA sin perder clientes
         </p>
+      </div>
+    </div>
 
-        <div class="hero-actions reveal reveal-delay-3">
-          <a href="#precios" class="btn btn-primary btn-lg">
-            Quiero mi MasterCRM →
-          </a>
-          <a href="#como-funciona" class="btn btn-ghost btn-lg">
-            Ver cómo funciona
-          </a>
+    <!-- Mockup debajo del texto -->
+    <div class="hero-visual reveal-scale reveal-delay-2" style="max-width:700px; margin:48px auto 0; position:relative;">
+
+      <div class="dashboard-mockup">
+        <div class="mockup-bar" aria-hidden="true">
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+          <span style="margin-left:8px; font-size:0.72rem; color:var(--text-dim);">MasterCRM · Dashboard</span>
         </div>
 
-        <div class="hero-social-proof reveal reveal-delay-4">
-          <div class="hero-avatars" aria-hidden="true">
-            <span title="Ana">AN</span>
-            <span title="Carlos">CA</span>
-            <span title="María">MA</span>
-            <span title="Roberto">RO</span>
+        <div class="mockup-body">
+          <!-- Stats -->
+          <div class="mockup-stats" aria-label="Estadísticas del día">
+            <div class="mockup-stat">
+              <div class="mockup-stat-num">247</div>
+              <div class="mockup-stat-label">Conversaciones</div>
+            </div>
+            <div class="mockup-stat">
+              <div class="mockup-stat-num" style="color:var(--ok);">98%</div>
+              <div class="mockup-stat-label">Respondidas IA</div>
+            </div>
+            <div class="mockup-stat">
+              <div class="mockup-stat-num" style="color:var(--accent);">34</div>
+              <div class="mockup-stat-label">Leads captados</div>
+            </div>
           </div>
-          <p class="hero-social-text" style="margin:0; font-size:0.9rem;">
-            <strong>+340 negocios</strong> ya atienden con IA sin perder clientes
-          </p>
+
+          <!-- Conversaciones recientes -->
+          <div class="mockup-conv-list" aria-label="Conversaciones recientes">
+            <div class="mockup-conv-item">
+              <div class="mockup-avatar">LA</div>
+              <div class="mockup-msg">
+                <div class="mockup-msg-name">Laura Sánchez · WhatsApp</div>
+                <div class="mockup-msg-preview">¿Cuánto cuesta el plan premium? 💬</div>
+              </div>
+              <span class="tag tag-ok" style="font-size:0.65rem; padding:3px 8px;">IA respondió</span>
+            </div>
+            <div class="mockup-conv-item">
+              <div class="mockup-avatar" style="background:linear-gradient(135deg, #833ab4, #fd1d1d);">MR</div>
+              <div class="mockup-msg">
+                <div class="mockup-msg-name">Miguel R. · Instagram</div>
+                <div class="mockup-msg-preview">Necesito hablar con alguien de ventas</div>
+              </div>
+              <span class="tag tag-accent" style="font-size:0.65rem; padding:3px 8px;">Escalado → tú</span>
+            </div>
+            <div class="mockup-conv-item">
+              <div class="mockup-avatar" style="background:linear-gradient(135deg, #0088cc, #00c2ff);">DP</div>
+              <div class="mockup-msg">
+                <div class="mockup-msg-name">Diego P. · Telegram</div>
+                <div class="mockup-msg-preview">Perfecto, me interesa el plan anual 🔥</div>
+              </div>
+              <span class="tag tag-info" style="font-size:0.65rem; padding:3px 8px;">Lead calificado</span>
+            </div>
+          </div>
+
+          <!-- Canales conectados -->
+          <div>
+            <div style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Canales activos</div>
+            <div class="mockup-channel-icons">
+              <span class="mockup-channel">💬 WhatsApp</span>
+              <span class="mockup-channel">✈️ Telegram</span>
+              <span class="mockup-channel">📸 Instagram</span>
+              <span class="mockup-channel">💙 Messenger</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Visual mockup -->
-      <div class="hero-visual reveal-scale reveal-delay-1">
-
-        <div class="dashboard-mockup">
-          <div class="mockup-bar" aria-hidden="true">
-            <span class="mockup-dot"></span>
-            <span class="mockup-dot"></span>
-            <span class="mockup-dot"></span>
-            <span style="margin-left:8px; font-size:0.72rem; color:var(--text-dim);">MasterCRM · Dashboard</span>
-          </div>
-
-          <div class="mockup-body">
-            <!-- Stats -->
-            <div class="mockup-stats" aria-label="Estadísticas del día">
-              <div class="mockup-stat">
-                <div class="mockup-stat-num">247</div>
-                <div class="mockup-stat-label">Conversaciones</div>
-              </div>
-              <div class="mockup-stat">
-                <div class="mockup-stat-num" style="color:var(--ok);">98%</div>
-                <div class="mockup-stat-label">Respondidas IA</div>
-              </div>
-              <div class="mockup-stat">
-                <div class="mockup-stat-num" style="color:var(--accent);">34</div>
-                <div class="mockup-stat-label">Leads captados</div>
-              </div>
-            </div>
-
-            <!-- Conversaciones recientes -->
-            <div class="mockup-conv-list" aria-label="Conversaciones recientes">
-              <div class="mockup-conv-item">
-                <div class="mockup-avatar">LA</div>
-                <div class="mockup-msg">
-                  <div class="mockup-msg-name">Laura Sánchez · WhatsApp</div>
-                  <div class="mockup-msg-preview">¿Cuánto cuesta el plan premium? 💬</div>
-                </div>
-                <span class="tag tag-ok" style="font-size:0.65rem; padding:3px 8px;">IA respondió</span>
-              </div>
-              <div class="mockup-conv-item">
-                <div class="mockup-avatar" style="background:linear-gradient(135deg, #833ab4, #fd1d1d);">MR</div>
-                <div class="mockup-msg">
-                  <div class="mockup-msg-name">Miguel R. · Instagram</div>
-                  <div class="mockup-msg-preview">Necesito hablar con alguien de ventas</div>
-                </div>
-                <span class="tag tag-accent" style="font-size:0.65rem; padding:3px 8px;">Escalado → tú</span>
-              </div>
-              <div class="mockup-conv-item">
-                <div class="mockup-avatar" style="background:linear-gradient(135deg, #0088cc, #00c2ff);">DP</div>
-                <div class="mockup-msg">
-                  <div class="mockup-msg-name">Diego P. · Telegram</div>
-                  <div class="mockup-msg-preview">Perfecto, me interesa el plan anual 🔥</div>
-                </div>
-                <span class="tag tag-info" style="font-size:0.65rem; padding:3px 8px;">Lead calificado</span>
-              </div>
-            </div>
-
-            <!-- Canales conectados -->
-            <div>
-              <div style="font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Canales activos</div>
-              <div class="mockup-channel-icons">
-                <span class="mockup-channel">💬 WhatsApp</span>
-                <span class="mockup-channel">✈️ Telegram</span>
-                <span class="mockup-channel">📸 Instagram</span>
-                <span class="mockup-channel">💙 Messenger</span>
-              </div>
-            </div>
-          </div>
+      <!-- Badges flotantes -->
+      <div class="hero-badge hero-badge-left" aria-hidden="true">
+        <span class="badge-icon">🤖</span>
+        <div>
+          <div style="font-size:0.8rem; font-weight:700;">IA respondió sola</div>
+          <div style="font-size:0.72rem; color:var(--text-dim);">Hace 2 segundos</div>
         </div>
-
-        <!-- Badges flotantes -->
-        <div class="hero-badge hero-badge-left" aria-hidden="true">
-          <span class="badge-icon">🤖</span>
-          <div>
-            <div style="font-size:0.8rem; font-weight:700;">IA respondió sola</div>
-            <div style="font-size:0.72rem; color:var(--text-dim);">Hace 2 segundos</div>
-          </div>
-        </div>
-
-        <div class="hero-badge hero-badge-top" aria-hidden="true">
-          <span class="badge-icon">🔥</span>
-          <div>
-            <div style="font-size:0.8rem; font-weight:700;">Lead calificado</div>
-            <div style="font-size:0.72rem; color:var(--text-dim);">Plan anual · $499</div>
-          </div>
-        </div>
-
       </div>
+
+      <div class="hero-badge hero-badge-top" aria-hidden="true">
+        <span class="badge-icon">🔥</span>
+        <div>
+          <div style="font-size:0.8rem; font-weight:700;">Lead calificado</div>
+          <div style="font-size:0.72rem; color:var(--text-dim);">Plan anual · $499</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
