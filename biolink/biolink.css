@@ -678,7 +678,8 @@ p {
     height: 2.5rem;
     border-radius: 0.5rem;
     object-fit: contain;
-    background-color: white;
+    background-color: #ffffff;
+    padding: 4px;
     flex-shrink: 0;
 }
 
@@ -692,6 +693,15 @@ p {
     flex: 1;
     min-width: 0;
     text-align: left;
+}
+
+.biolink__duo-card-desc {
+    font-size: 0.55rem;
+    opacity: 0.8;
+    line-height: 1.1;
+    text-align: left;
+    flex: 1;
+    min-width: 0;
 }
 
 .biolink__duo-card-arrow {
