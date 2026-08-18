@@ -1,0 +1,48 @@
+/* ============================================
+   VARIABLES GLOBALES — CRM Multicanal Forja
+   Modo Claro adaptado del design system Meridian
+   ============================================ */
+
+:root {
+  /* --- Paleta base (modo claro) --- */
+  --bg:          #faf7f3;      /* fondo principal — crema muy suave */
+  --bg-alt:      #f3ede4;      /* fondo alternado — crema cálido */
+  --surface:     #ffffff;      /* tarjetas, paneles */
+  --surface-2:   #fdf9f5;      /* superficie anidada */
+
+  /* --- Acentos (herencia directa del design system Meridian) --- */
+  --accent:      #f07a3f;      /* naranja principal */
+  --accent-dark: #d45f25;      /* naranja presionado / hover */
+  --accent-soft: rgba(240, 122, 63, 0.12);
+  --accent-2:    #f5a623;      /* ámbar — IA / insights */
+
+  /* --- Bordes y separadores --- */
+  --line:        #e2d9ce;      /* borde por defecto */
+  --line-lit:    #c8b9a8;      /* borde activo */
+
+  /* --- Texto --- */
+  --text:        #1c1208;      /* texto principal — casi negro cálido */
+  --text-muted:  #6b5e50;      /* texto secundario */
+  --text-dim:    #9c8c7c;      /* texto terciario, etiquetas */
+
+  /* --- Semánticos --- */
+  --ok:          #3a8f4e;      /* verde éxito */
+  --ok-soft:     rgba(58, 143, 78, 0.1);
+  --info:        #3a6ea8;      /* azul info */
+  --info-soft:   rgba(58, 110, 168, 0.1);
+  --warn:        #b8860b;      /* ámbar aviso */
+
+  /* --- Sombras --- */
+  --shadow-sm:   0 2px 8px rgba(28, 18, 8, 0.07);
+  --shadow-md:   0 6px 24px rgba(28, 18, 8, 0.10);
+  --shadow-lg:   0 16px 48px rgba(28, 18, 8, 0.13);
+
+  /* --- Tipografía --- */
+  --font-sans:   'Inter', system-ui, sans-serif;
+  --font-display:'Space Grotesk', 'Inter', sans-serif;
+
+  /* --- Espaciado de contenedor --- */
+  --container:   1120px;
+  --radius:      12px;
+  --radius-lg:   20px;
+}
