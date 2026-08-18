@@ -740,6 +740,41 @@
     .logos-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
   }
   
+  .reviews-section { padding: 30px 0 80px; overflow: hidden; }
+  .reviews-summary { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 18px 0 34px; flex-wrap: wrap; }
+  .reviews-summary .g-stars { color: #fbbc04; font-size: 17px; letter-spacing: 2px; }
+  .reviews-mask {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+  }
+  .reviews-track {
+    display: flex; gap: 18px; width: max-content; padding: 6px 0 18px;
+    animation: reviews-scroll 85s linear infinite;
+  }
+  .reviews-section:hover .reviews-track { animation-play-state: paused; }
+  @keyframes reviews-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .review-card {
+    width: min(360px, 84vw); flex-shrink: 0;
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 22px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .review-head { display: flex; align-items: center; gap: 12px; }
+  .review-avatar {
+    width: 40px; height: 40px; border-radius: 50%; color: #fff;
+    font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .review-name { font-weight: 700; color: var(--text-primary); font-size: 14.5px; }
+  .review-meta { font-size: 12px; color: var(--text-muted); }
+  .review-stars { color: #fbbc04; font-size: 15px; letter-spacing: 2px; }
+  .review-text { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-track { animation: none; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .reviews-track::-webkit-scrollbar { display: none; }
+  }
   .service-section { padding: 90px 0 40px; }
   .service-panel {
     border: 1px solid rgba(249,115,22,.35);
@@ -1232,6 +1267,228 @@
           <span style="font-size:12.5px; color:var(--text-muted)">Instalación única · Sin mensualidades · Tu sistema, en tu cuenta</span>
         </div>
       </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Reseñas tipo Google -->
+  <section class="reviews-section">
+    <div class="container">
+      <div style="text-align:center">
+        <div class="section-badge">Testimonios</div>
+        <h2 class="section-title">Lo que dicen quienes ya lo usan</h2>
+        <div class="reviews-summary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#4285F4" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+          <span style="font-weight:800; font-size:18px; color:var(--text-primary)">4.9</span>
+          <span class="g-stars">★★★★★</span>
+          <span style="color:var(--text-muted); font-size:13px">· 10 reseñas</span>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-mask">
+      <div class="reviews-track"><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">C</div>
+          <div>
+            <div class="review-name">Carlos Mendoza</div>
+            <div class="review-meta">Dueño de tienda online · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Antes mi píxel no registraba casi nada con iOS. Desde que instalamos el server-side, Meta ve todas las compras y el costo por compra bajó notablemente.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">V</div>
+          <div>
+            <div class="review-name">Valeria Ríos</div>
+            <div class="review-meta">Media buyer · hace 1 semana</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Poder ver el score real de cada evento cambió todo. Detectamos que los eventos de checkout no estaban llegando y los arreglamos el mismo día.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#FBBC04">D</div>
+          <div>
+            <div class="review-name">Diego Paredes</div>
+            <div class="review-meta">Coach digital · hace 3 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Vendo por WhatsApp y por fin puedo atribuir esas ventas a mis anuncios. Ahora sé qué campañas realmente generan ventas.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#34A853">L</div>
+          <div>
+            <div class="review-name">Lucía Fernández</div>
+            <div class="review-meta">E-commerce (Shopify) · hace 5 días</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">La instalación fue rapidísima y me dejaron todo funcionando. Los eventos de compra llegan perfectos a Meta y TikTok.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">R</div>
+          <div>
+            <div class="review-name">Renato Salas</div>
+            <div class="review-meta">Agencia de ads · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Manejamos varios clientes y tener todo en un solo panel con el score de coincidencia nos ahorra horas de debugging.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">P</div>
+          <div>
+            <div class="review-name">Pamela Torres</div>
+            <div class="review-meta">Tienda en WordPress · hace 1 mes</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Con WooCommerce los webhooks funcionan de maravilla. Ya no dependemos del navegador de nadie y los datos llegan siempre.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#FBBC04">J</div>
+          <div>
+            <div class="review-name">Jorge Castillo</div>
+            <div class="review-meta">Afiliado en Hotmart · hace 4 días</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Las compras de Hotmart se registran automáticamente. Mi embudo por fin le enseña al algoritmo quién compra de verdad.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#34A853">A</div>
+          <div>
+            <div class="review-name">Andrea Quispe</div>
+            <div class="review-meta">Infoproductora · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">El auditor me dijo exactamente qué faltaba en mis eventos y cómo arreglarlo. El score subió de 1 a 9 en pocos días.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">M</div>
+          <div>
+            <div class="review-name">Miguel Rojas</div>
+            <div class="review-meta">Tienda física + online · hace 3 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Pensaba que era complicado, pero me instalaron todo y quedó listo. Sin mensualidades: el sistema es mío para siempre.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">K</div>
+          <div>
+            <div class="review-name">Karina León</div>
+            <div class="review-meta">Estratega de ads · hace 1 semana</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Lo que más valoro es saber qué anuncios generan ventas reales por WhatsApp. Eso solo se logra con server-side.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">C</div>
+          <div>
+            <div class="review-name">Carlos Mendoza</div>
+            <div class="review-meta">Dueño de tienda online · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Antes mi píxel no registraba casi nada con iOS. Desde que instalamos el server-side, Meta ve todas las compras y el costo por compra bajó notablemente.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">V</div>
+          <div>
+            <div class="review-name">Valeria Ríos</div>
+            <div class="review-meta">Media buyer · hace 1 semana</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Poder ver el score real de cada evento cambió todo. Detectamos que los eventos de checkout no estaban llegando y los arreglamos el mismo día.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#FBBC04">D</div>
+          <div>
+            <div class="review-name">Diego Paredes</div>
+            <div class="review-meta">Coach digital · hace 3 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Vendo por WhatsApp y por fin puedo atribuir esas ventas a mis anuncios. Ahora sé qué campañas realmente generan ventas.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#34A853">L</div>
+          <div>
+            <div class="review-name">Lucía Fernández</div>
+            <div class="review-meta">E-commerce (Shopify) · hace 5 días</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">La instalación fue rapidísima y me dejaron todo funcionando. Los eventos de compra llegan perfectos a Meta y TikTok.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">R</div>
+          <div>
+            <div class="review-name">Renato Salas</div>
+            <div class="review-meta">Agencia de ads · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Manejamos varios clientes y tener todo en un solo panel con el score de coincidencia nos ahorra horas de debugging.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">P</div>
+          <div>
+            <div class="review-name">Pamela Torres</div>
+            <div class="review-meta">Tienda en WordPress · hace 1 mes</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Con WooCommerce los webhooks funcionan de maravilla. Ya no dependemos del navegador de nadie y los datos llegan siempre.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#FBBC04">J</div>
+          <div>
+            <div class="review-name">Jorge Castillo</div>
+            <div class="review-meta">Afiliado en Hotmart · hace 4 días</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Las compras de Hotmart se registran automáticamente. Mi embudo por fin le enseña al algoritmo quién compra de verdad.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#34A853">A</div>
+          <div>
+            <div class="review-name">Andrea Quispe</div>
+            <div class="review-meta">Infoproductora · hace 2 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">El auditor me dijo exactamente qué faltaba en mis eventos y cómo arreglarlo. El score subió de 1 a 9 en pocos días.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#4285F4">M</div>
+          <div>
+            <div class="review-name">Miguel Rojas</div>
+            <div class="review-meta">Tienda física + online · hace 3 semanas</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Pensaba que era complicado, pero me instalaron todo y quedó listo. Sin mensualidades: el sistema es mío para siempre.</p>
+      </div><div class="review-card">
+        <div class="review-head">
+          <div class="review-avatar" style="background:#EA4335">K</div>
+          <div>
+            <div class="review-name">Karina León</div>
+            <div class="review-meta">Estratega de ads · hace 1 semana</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p class="review-text">Lo que más valoro es saber qué anuncios generan ventas reales por WhatsApp. Eso solo se logra con server-side.</p>
+      </div></div>
     </div>
   </section>
 
