@@ -650,7 +650,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.7rem 0.6rem;
+    padding: 0.5rem;
     border-radius: 1rem;
     text-decoration: none;
     color: white;
@@ -678,8 +678,6 @@ p {
     height: 2.5rem;
     border-radius: 0.5rem;
     object-fit: contain;
-    background-color: #ffffff;
-    padding: 4px;
     flex-shrink: 0;
 }
 
