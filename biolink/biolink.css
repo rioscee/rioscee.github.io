@@ -580,10 +580,6 @@ p {
     background-color: #fbbf24;
 }
 
-.biolink__badge--green {
-    background-color: #34d399;
-}
-
 /* Modificadores de color para tarjetas */
 .biolink__card--primary {
     background: radial-gradient(circle at 50% 20%, rgba(34, 197, 94, 0.3) 0%, rgba(10, 14, 22, 0.98) 75%), #0d1117;
@@ -627,6 +623,107 @@ p {
 
 .biolink__card--cyan .biolink__card-arrow {
     color: #22d3ee;
+}
+
+.biolink__card--edge {
+    background: radial-gradient(circle at 50% 20%, rgba(0, 120, 212, 0.35) 0%, rgba(10, 14, 22, 0.98) 75%), #0d1117;
+    border: 1px solid rgba(0, 120, 212, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 120, 212, 0.25);
+}
+
+.biolink__card--edge .biolink__card-title,
+.biolink__card--edge .biolink__duo-card-title {
+    color: #38bdf8;
+}
+
+/* --- DUO GRID: 2 tarjetas lado a lado --- */
+.biolink__duo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    margin-top: 15px;
+}
+
+.biolink__duo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    overflow: visible;
+}
+
+.biolink__duo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.biolink__duo-card .biolink__badge {
+    top: -8px;
+    right: 8px;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.45rem;
+}
+
+.biolink__duo-card-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.65rem;
+    object-fit: cover;    
+    background-color: white;
+}
+
+.biolink__duo-card-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.65rem;
+    background-color: rgba(0, 120, 212, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #38bdf8;
+}
+
+.biolink__duo-card-icon svg,
+.biolink__duo-card-icon i {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.biolink__duo-card-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Outfit', sans-serif;
+    padding: 0 0.2rem;
+}
+
+.biolink__duo-card-arrow {
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s;
+}
+
+.biolink__duo-card-arrow svg,
+.biolink__duo-card-arrow i {
+    width: 1rem;
+    height: 1rem;
+}
+
+.biolink__duo-card:hover .biolink__duo-card-arrow {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.biolink__badge--green {
+    background-color: #22c55e;
 }
 
 .biolink__card-icon-round--cyan {
