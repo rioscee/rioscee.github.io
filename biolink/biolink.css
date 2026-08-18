@@ -646,11 +646,11 @@ p {
 
 .biolink__duo-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0.45rem;
-    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+    padding: 0.7rem 0.6rem;
     border-radius: 1rem;
     text-decoration: none;
     color: white;
@@ -668,42 +668,27 @@ p {
 
 .biolink__duo-card .biolink__badge {
     top: -8px;
-    right: 8px;
-    font-size: 0.6rem;
-    padding: 0.15rem 0.45rem;
-}
-
-.biolink__duo-card-img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.65rem;
-    object-fit: cover;    
+    right: 10px;
+    font-size: 0.55rem;
+    padding: 0.12rem 0.4rem;
+}.biolink__duo-card-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    object-fit: contain;
     background-color: white;
+    flex-shrink: 0;
 }
 
-.biolink__duo-card-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.65rem;
-    background-color: rgba(0, 120, 212, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #38bdf8;
-}
 
-.biolink__duo-card-icon svg,
-.biolink__duo-card-icon i {
-    width: 1.3rem;
-    height: 1.3rem;
-}
 
 .biolink__duo-card-title {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     font-family: 'Outfit', sans-serif;
-    padding: 0 0.2rem;
+    flex: 1;
+    min-width: 0;
 }
 
 .biolink__duo-card-arrow {
