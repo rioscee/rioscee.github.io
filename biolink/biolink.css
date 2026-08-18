@@ -459,8 +459,8 @@ p {
 
 /* Divisor de texto */
 .biolink__divider {
-    text-align: center;
-    margin: 0.5rem 0;
+    text-align: left;
+    margin: 2rem 0 0.5rem;
 }
 
 .biolink__divider span {
