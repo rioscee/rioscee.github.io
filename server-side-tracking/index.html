@@ -133,9 +133,22 @@
   /* Hero Section */
   .hero-section {
     padding: 70px 0 90px;
-    text-align: center;
+    text-align: left;
     position: relative;
     content-visibility: auto;
+    overflow: hidden;
+  }
+  .hero-video-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
   }
   .hero-glow {
     position: absolute;
@@ -191,13 +204,13 @@
     font-size: 19px;
     color: var(--text-secondary);
     max-width: 820px;
-    margin: 0 auto 32px;
+    margin: 0 0 32px;
     position: relative;
     z-index: 1;
   }
   .hero-cta-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
@@ -207,7 +220,7 @@
   }
   .proof-badges {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
@@ -830,7 +843,8 @@
     header .btn-edge { display: none !important; }
     /* Botón Edge del hero: texto más pequeño, sin salto de línea */
     .hero-cta-group .btn-edge { font-size: 12px !important; padding: 12px 14px !important; white-space: nowrap; }
-    .hero-cta-group { flex-wrap: wrap; justify-content: center; }
+    .hero-cta-group { flex-wrap: wrap; justify-content: flex-start; }
+    .hero-video-bg { object-position: center 30%; }
     /* Stage: reemplazar animación rota por la imagen estática */
     .hero-network-stage { margin: 28px auto 0; padding: 0; }
     .hero-network-stage > *:not(.stage-mobile-static) { display: none; }
@@ -895,40 +909,22 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="hero-server-side.mp4" type="video/mp4">
+    </video>
     <div class="hero-glow"></div>
     <div class="container">
-      <div class="alert-pill">
-        <span class="alert-tag">Alerta CAPI</span>
-        <span>Hasta el 45% de tus conversiones son invisibles para Facebook y Google Ads</span>
-      </div>
-
       <h1 class="hero-title">
-        Deja de pagar por anuncios que <br>
-        <span class="gradient-text">Meta no puede medir</span>
+        CRM Multicanal con IA · <span class="gradient-text">Horizontes IA</span>
       </h1>
 
       <p class="hero-sub">
-        <strong>Tus campañas pueden estar generando ventas que Meta nunca registra.</strong>
-        iOS, AdBlockers, Safari y las restricciones de los navegadores pueden impedir que tus conversiones lleguen correctamente a Meta y Google.
-      </p>
-
-      <p class="hero-sub" style="margin-top:16px">
-        <strong>Recupera esas señales con Server-Side Tracking y dale a tus campañas los datos que necesitan para optimizar mejor.</strong>
+        <strong>Cada mensaje sin respuesta es un cliente que se va con tu competencia.</strong>
+        MasterCRM conecta Telegram, WhatsApp, Instagram y Messenger en un solo panel inteligente. Tu IA responde, califica leads y escala a ti solo cuando importa — las 24 horas, los 7 días.
       </p>
 
       <div class="hero-cta-group">
-        <a href="https://wa.me/51990473216?text=Quiero%20mas%20informaci%C3%B3n%20del%20server-side-tracking" target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size:16px; padding:15px 28px; background:#25d366; color:#fff; box-shadow:0 8px 24px rgba(37,211,102,.28)">
-          💬 Quiero recuperar mis conversiones
-        </a>
-        
-        
-      </div>
-
-      <div class="proof-badges">
-        <span><strong style="color:var(--color-success)">✓</strong> Instalación completa por nosotros</span>
-        <span><strong style="color:var(--color-success)">✓</strong> Sin mensualidades</span>
-        <span><strong style="color:var(--color-success)">✓</strong> Funciona en tu propia cuenta de Cloudflare</span>
-        <span><strong style="color:var(--color-success)">✓</strong> Meta CAPI + Google + TikTok + WhatsApp</span>
+        <span style="font-size:14px; font-weight:700; color:var(--text-secondary); letter-spacing:0.06em;">AN&nbsp;&nbsp;&nbsp;CA&nbsp;&nbsp;&nbsp;MA&nbsp;&nbsp;&nbsp;RO&nbsp;&nbsp;&nbsp;<strong style="color:var(--color-success)">+340 negocios ya atienden con IA sin perder clientes</strong></span>
       </div>
 
       <!-- Stage con animación de integración de redes sociales y mockup central -->
