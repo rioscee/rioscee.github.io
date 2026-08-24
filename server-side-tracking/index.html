@@ -903,18 +903,6 @@
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <div class="container nav-wrap">
-      <a href="/" class="logo">
-        <img src="data:image/png;base64,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" alt="Pixel Tracking Suite" style="width:28px; height:28px; border-radius:7px; flex-shrink:0">
-        <span>Server-Side Tracking</span>
-      </a>
-      <div>
-        <a href="https://microsoftedge.microsoft.com/addons/detail/pixel-analytics-suite/hghhjkpdpdoncpcgdpkjkfmiamcphien" target="_blank" rel="noopener" class="btn btn-edge" style="padding:8px 18px; font-size:13.5px" title="Descargar extensión de Microsoft Edge"><svg width="17" height="17" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg> Disponible en Microsoft Edge</a>
-      </div>
-    </div>
-  </header>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -926,7 +914,7 @@
       <div class="hero-inner">
         <div>
           <h1 class="hero-title">
-            CRM Multicanal con IA · <span class="gradient-text">Horizontes IA</span>
+            CRM Multicanal Operado <span class="gradient-text">100% por IA</span>
           </h1>
 
           <p class="hero-sub">
