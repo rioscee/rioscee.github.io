@@ -138,6 +138,15 @@
     content-visibility: auto;
     overflow: hidden;
   }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 760px) {
+    .hero-inner { grid-template-columns: 1fr; }
+  }
   .hero-video-bg {
     position: absolute;
     top: 0; left: 0;
@@ -914,20 +923,29 @@
     </video>
     <div class="hero-glow"></div>
     <div class="container">
-      <h1 class="hero-title">
-        CRM Multicanal con IA · <span class="gradient-text">Horizontes IA</span>
-      </h1>
+      <div class="hero-inner">
+        <div>
+          <h1 class="hero-title">
+            CRM Multicanal con IA · <span class="gradient-text">Horizontes IA</span>
+          </h1>
 
-      <p class="hero-sub">
-        <strong>Cada mensaje sin respuesta es un cliente que se va con tu competencia.</strong>
-        MasterCRM conecta Telegram, WhatsApp, Instagram y Messenger en un solo panel inteligente. Tu IA responde, califica leads y escala a ti solo cuando importa — las 24 horas, los 7 días.
-      </p>
+          <p class="hero-sub">
+            <strong>Cada mensaje sin respuesta es un cliente que se va con tu competencia.</strong>
+            MasterCRM conecta Telegram, WhatsApp, Instagram y Messenger en un solo panel inteligente. Tu IA responde, califica leads y escala a ti solo cuando importa — las 24 horas, los 7 días.
+          </p>
 
-      <div class="hero-cta-group">
-        <span style="font-size:14px; font-weight:700; color:var(--text-secondary); letter-spacing:0.06em;">AN&nbsp;&nbsp;&nbsp;CA&nbsp;&nbsp;&nbsp;MA&nbsp;&nbsp;&nbsp;RO&nbsp;&nbsp;&nbsp;<strong style="color:var(--color-success)">+340 negocios ya atienden con IA sin perder clientes</strong></span>
+          <div class="hero-cta-group">
+            <span style="font-size:14px; font-weight:700; color:var(--text-secondary); letter-spacing:0.06em;">AN&nbsp;&nbsp;&nbsp;CA&nbsp;&nbsp;&nbsp;MA&nbsp;&nbsp;&nbsp;RO&nbsp;&nbsp;&nbsp;<strong style="color:var(--color-success)">+340 negocios ya atienden con IA sin perder clientes</strong></span>
+          </div>
+        </div>
+        <div></div>
       </div>
+    </div>
+  </section>
 
-      <!-- Stage con animación de integración de redes sociales y mockup central -->
+  <!-- Network Stage Section -->
+  <section style="padding: 0 0 40px; position: relative;">
+    <div class="container">
       <div class="hero-network-stage">
         <img class="stage-mobile-static" src="server-side-hero.webp" alt="Panel de Server-Side Tracking con score real de eventos" />
 
@@ -1009,7 +1027,6 @@
           <img src="server-side-hero.webp" alt="Panel de Server-Side Tracking" style="width:100%; height:auto; display:block; border-radius:12px" />
         </div>
       </div>
-
     </div>
   </section>
 
