@@ -472,10 +472,10 @@ p {
     border-radius: 9999px;
 }
 
-/* --- MINI GRID: 3 tarjetas en fila --- */
+/* --- MINI GRID: 2 tarjetas en fila --- */
 .biolink__mini-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
     margin-top: 15px;
 }
@@ -519,6 +519,7 @@ p {
 .biolink__mini-card-img {
     width: 4.4rem;
     height: 4.4rem;
+    aspect-ratio: 1 / 1;
     border-radius: 0.85rem;
     object-fit: cover;
 }
@@ -547,6 +548,7 @@ p {
     position: relative;
     width: 100%;
     margin-top: 15px;
+    content-visibility: auto;
 }
 
 .biolink__card {
@@ -615,7 +617,12 @@ p {
 }
 
 .biolink__card--blue {
-    background-color: #2563eb; /* Azul oscuro */
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.biolink__card--blue:hover {
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
 }
 
 .biolink__card--cyan {
@@ -772,6 +779,7 @@ p {
 .biolink__card-img-circle {
     width: 3.5rem;
     height: 3.5rem;
+    aspect-ratio: 1 / 1;
     border-radius: 0.75rem; /* Cuadrado con esquinas redondeadas */
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -814,6 +822,7 @@ p {
 .biolink__card-telegram-icon {
     width: 28px;
     height: 28px;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
 }
 
