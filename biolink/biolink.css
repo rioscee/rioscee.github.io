@@ -631,7 +631,8 @@ p {
     box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25);
 }
 
-.biolink__card--cyan .biolink__card-title {
+.biolink__card--cyan .biolink__card-title,
+.biolink__card--cyan .biolink__duo-card-title {
     color: #22d3ee;
 }
 
