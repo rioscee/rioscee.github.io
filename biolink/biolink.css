@@ -548,6 +548,8 @@ p {
     position: relative;
     width: 100%;
     margin-top: 20px;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 90px;
 }
 
 .biolink__card {
@@ -649,6 +651,29 @@ p {
 .biolink__card--edge .biolink__card-title,
 .biolink__card--edge .biolink__duo-card-title {
     color: #38bdf8;
+}
+
+.biolink__card--voice {
+    background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.35) 0%, rgba(10, 14, 22, 0.98) 75%), #0d1117;
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
+}
+
+.biolink__card--voice:hover {
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.45);
+}
+
+.biolink__card--voice .biolink__card-title {
+    color: #38bdf8;
+}
+
+.biolink__card--voice .biolink__card-arrow {
+    color: #38bdf8;
+}
+
+.biolink__card--voice .biolink__card-img-circle {
+    background-color: #0b1221;
+    border-color: rgba(56, 189, 248, 0.4);
 }
 
 /* --- DUO GRID: 2 tarjetas lado a lado --- */
